@@ -1,0 +1,359 @@
+<!DOCTYPE html><html class="light" lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Hanoi Autumn - 2 phòng ngủ nghệ thuật</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-variant": "#e4e2e2",
+                "on-secondary-fixed": "#3b0900",
+                "surface": "#fbf9f9",
+                "inverse-surface": "#303031",
+                "tertiary-fixed": "#ffe088",
+                "error": "#ba1a1a",
+                "secondary-fixed": "#ffdbd1",
+                "on-error-container": "#93000a",
+                "surface-container-highest": "#e4e2e2",
+                "primary-fixed": "#d3e4f8",
+                "primary": "#051625",
+                "on-error": "#ffffff",
+                "error-container": "#ffdad6",
+                "background": "#fbf9f9",
+                "secondary-fixed-dim": "#ffb5a0",
+                "on-secondary": "#ffffff",
+                "on-primary": "#ffffff",
+                "on-primary-container": "#8292a5",
+                "surface-container": "#efeded",
+                "surface-tint": "#506071",
+                "tertiary": "#735c00",
+                "surface-container-high": "#e9e8e7",
+                "surface-dim": "#dbdad9",
+                "on-primary-fixed": "#0c1d2b",
+                "inverse-primary": "#b8c8dc",
+                "primary-fixed-dim": "#b8c8dc",
+                "on-primary-fixed-variant": "#384858",
+                "secondary": "#924a34",
+                "on-background": "#1b1c1c",
+                "on-surface-variant": "#43474c",
+                "outline": "#74777c",
+                "surface-container-low": "#f5f3f3",
+                "secondary-container": "#fea186",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-container": "#4f3e00",
+                "on-surface": "#1b1c1c",
+                "on-secondary-container": "#783522",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#e9c349",
+                "primary-container": "#1b2b3a",
+                "on-tertiary-fixed": "#241a00",
+                "tertiary-container": "#cca830",
+                "surface-bright": "#fbf9f9",
+                "outline-variant": "#c4c6cc",
+                "on-tertiary-fixed-variant": "#574500",
+                "on-secondary-fixed-variant": "#753320",
+                "inverse-on-surface": "#f2f0f0"
+            },
+            "spacing": {
+                "stack-sm": "8px",
+                "base": "8px",
+                "stack-md": "16px",
+                "gutter": "24px",
+                "container-max": "1280px",
+                "stack-xl": "64px",
+                "margin-mobile": "16px",
+                "margin-desktop": "48px",
+                "stack-lg": "32px"
+            },
+            "fontFamily": {
+                "label-lg": ["Inter"],
+                "headline-lg": ["Hanken Grotesk"],
+                "display-lg-mobile": ["Hanken Grotesk"],
+                "label-md": ["Inter"],
+                "body-sm": ["Inter"],
+                "headline-sm": ["Hanken Grotesk"],
+                "display-md": ["Hanken Grotesk"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"],
+                "body-lg": ["Inter"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                "headline-lg": ["30px", {"lineHeight": "38px", "fontWeight": "600"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                "display-md": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .custom-shadow {
+        box-shadow: 0px 4px 20px 0px rgba(5, 22, 37, 0.15);
+      }
+      body {
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin-mobile h-16 bg-surface dark:bg-surface-container-low shadow-[0px_4px_20px_0px_rgba(5,22,37,0.15)]">
+<div class="flex items-center gap-stack-sm">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tight">Hanoi Autumn</h1>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User Profile" data-alt="A professional headshot of a friendly user for a luxury travel application. The lighting is soft and warm, mimicking a high-end studio portrait. The background is a blurred, minimalist interior with neutral tones. This image maintains the sophisticated, hospitality-focused aesthetic of the Hanoi Autumn brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVrFDJWJGge49tqwbpAq2kF10l2QRbzY9GgE8Yy0FLhBWYxf0UDNihwjYZxDlqL1tlFnPKv80ivftKNyi3aA2fCUSvUTOeYqbx79ozKSao1HW0QavVlnE9pAvP7M3cRj8to4VO8O900wYgDRNkZ2meqknUQ-7G7sSASG0Bx_WF87LviyrZXYjoT7d2yt30zf85V5rcXAKGicttZ28jNzdyT2EJ8ckDGPJf7eDAT2wos6o1zR1K3W0EQ902NXMbRffMGJh1oKds8yOO">
+</div>
+</div>
+</header>
+<main class="pt-16 pb-24">
+<!-- Image Gallery Hero -->
+<section class="relative w-full aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A luxurious living room in Hanoi featuring deep red accent walls and elegant teal-colored Indochine-style doors. The space is furnished with warm wooden pieces, artisanal textiles, and subtle gold decor accents. Soft afternoon sunlight filters through sheer curtains, creating a tranquil and sophisticated atmosphere in this high-end apartment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO8FIIWA1evS9rfo5BXXFuQVqlLB0v_IzJvQNpBVtP4Cao8dMOAfwODwvHwANnTQv9Bo_7DNgIOvGb4XVxbUvkI-XhSQgEmZTRtsY5-ZGVsRHHeFZd9JOhGitUnXVFFj2bZ8_TTa6CJ-p6_IzY296uNV9EKQ2XuzyC8becLa4S5B3lpeo6whZ93CDUmbdmUp4zHYS4M2FDt3x6jgvZv0LVaFiMtxjcnYOuz4FEGVWR-SZNNMqCLkK4SrJ7_S8bulGTacFpRrIxdff-">
+<div class="absolute bottom-4 right-4 bg-primary/80 text-on-primary px-3 py-1 rounded-full text-label-md font-label-md backdrop-blur-sm">
+                1 / 3
+            </div>
+<div class="absolute top-4 right-4 flex gap-2">
+<button class="w-10 h-10 bg-surface/90 rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="share">share</span>
+</button>
+<button class="w-10 h-10 bg-surface/90 rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="favorite">favorite</span>
+</button>
+</div>
+</section>
+<!-- Property Title & Location -->
+<section class="px-margin-mobile py-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm leading-tight">
+                2 phòng ngủ nghệ thuật gần Công viên Thống Nhất | Đi bộ đến Vincom
+            </h2>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="font-body-md text-body-md underline decoration-outline-variant">Hai Bà Trưng, Hà Nội</span>
+</div>
+</section>
+<!-- Host Info -->
+<section class="px-margin-mobile py-stack-md border-y border-outline-variant flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm">Entire apartment hosted by Linh</h3>
+<p class="text-on-surface-variant font-body-sm text-body-sm">4 years of hosting</p>
+</div>
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-secondary-container">
+<img alt="Linh Host" data-alt="A friendly and professional portrait of a Vietnamese woman in her late 30s, who is the host of a luxury stay in Hanoi. She is smiling warmly at the camera, wearing professional yet approachable attire. The lighting is bright and natural, suggesting a high-quality hospitality experience consistent with a premium concierge brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_yBbPfxURXrCAs09LT02PiYJSq4I6ZtFh8aeqzsHiSRF73Xx6A9CkG0yW50S8bEpV_52XWFvnpg0WnLrhIX-fNgSRWxH0cIRXKap7CA-1i1X4xZ9LE8WEvLa3_cTdvruRE-pvosHrMH9RU9hjeMRbzo4Do9PUbHe6JS60Ik4D8PXNQ0sMQpONNw4HdCtriwiIvh9a6RdN0HAp_9Ke0pGGxIpg90wz-JFVYCsP2QFMB-J5AtWwMzv_d_uEzhzin-m-QA-0VBcwaa8l">
+</div>
+</section>
+<!-- Highlights -->
+<section class="px-margin-mobile py-stack-lg space-y-gutter">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="palette">palette</span>
+<div>
+<h4 class="font-label-lg text-label-lg">Artistic Decor</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Unique interior with red accent walls and Indochine soul.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="location_city">location_city</span>
+<div>
+<h4 class="font-label-lg text-label-lg">Great Location</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Steps from Thống Nhất Park and premium shopping malls.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="verified_user">verified_user</span>
+<div>
+<h4 class="font-label-lg text-label-lg">Highly Rated Host</h4>
+<p class="text-on-surface-variant font-body-sm text-body-sm">Linh is recognized for providing exceptional guest experiences.</p>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="px-margin-mobile py-stack-lg bg-surface-container-low rounded-xl mx-margin-mobile">
+<h3 class="font-headline-sm text-headline-sm mb-stack-md text-primary">About this space</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Experience the vibrant heart of Hanoi in our unique 2-bedroom apartment. Every corner is a statement piece, blending bold artistic touches like red accent walls with traditional teal-lacquered doors. A perfect sanctuary that marries Indochine heritage with modern luxury, overlooking the serene Thống Nhất Park.
+            </p>
+<button class="mt-stack-md font-label-lg text-label-lg text-secondary underline">Show more</button>
+</section>
+<!-- Amenities -->
+<section class="px-margin-mobile py-stack-xl">
+<h3 class="font-headline-sm text-headline-sm mb-stack-lg">What this place offers</h3>
+<div class="grid grid-cols-1 gap-stack-md">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="wifi">wifi</span>
+<span class="font-body-md text-body-md">High-speed Wi-Fi</span>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="ac_unit">ac_unit</span>
+<span class="font-body-md text-body-md">Air conditioning</span>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="cooking">cooking</span>
+<span class="font-body-md text-body-md">Fully equipped kitchen</span>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="laptop_mac">laptop_mac</span>
+<span class="font-body-md text-body-md">Dedicated workspace</span>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="tv">tv</span>
+<span class="font-body-md text-body-md">TV with Netflix</span>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="local_laundry_service">local_laundry_service</span>
+<span class="font-body-md text-body-md">In-unit Washer</span>
+</div>
+</div>
+<button class="mt-stack-xl w-full border border-primary text-primary py-stack-md rounded-lg font-label-lg text-label-lg hover:bg-surface-container-high transition-colors">
+                Show all 24 amenities
+            </button>
+</section>
+<!-- Location Map -->
+<section class="px-margin-mobile py-stack-lg">
+<h3 class="font-headline-sm text-headline-sm mb-stack-md">Where you'll be</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Hai Bà Trưng district, Hanoi. A premium residential area known for its proximity to parks and luxury shopping.</p>
+<div class="w-full h-48 rounded-xl overflow-hidden shadow-sm relative">
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="A stylized, artistic map overview of the Hai Bà Trưng district in Hanoi. The map features minimalist linework in deep indigo and warm neutral tones, emphasizing the green expanse of Thống Nhất Park. The aesthetic is clean and modern, matching a luxury travel concierge design system." data-location="Hanoi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY7a6qk8VETTaujN_InIpttrAA-wRJINTJWM4ZCYLEm5f6TAUr1eYPKemsk5tGnCeyZn3tlV0JiiZRqU3aH3zJwfSYntrTGDTGWPN9Qic-9gqzDmfm2Mt5iAk2rKV9zpnE34VTt8_gMLCvkVx_iadyQT2Mc_dZJW9FrCnu5frZF9Fn_PzHY88N6BP3yyUBI1kNz6N9mCm___WEx4mKvIvNk5zrDG4tVYYcgrlpNe8JKtYxG_rQV9U7RdRPcCDvyhR59InNZhU1ZZaX">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-secondary p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews -->
+<section class="px-margin-mobile py-stack-xl border-t border-outline-variant mt-stack-xl">
+<div class="flex items-center gap-2 mb-stack-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline-sm text-headline-sm">4.92 · 128 reviews</span>
+</div>
+<div class="space-y-stack-xl">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-xl shadow-sm border border-outline-variant/30">
+<div class="flex items-center gap-stack-md mb-stack-md">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img data-alt="A profile photo of a happy guest named Sarah for a luxury stay review section. She is smiling naturally in an outdoor setting with warm, soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCegCQ0MEa2VpYY7r1-rBCbe8FJsPXZNKKkzmvQC6i-fMow0qivVo22Chp8lKuwSm4ZGvUGazCNm_GTkHqz3yRt3TTnHNOR5u6QhAEjjN37xXG_HwsEgFo42vFhXfKOGCix0HzfEUlozIB_tsgciZUVEdyMO1jP9K7O2HB86Qwmn_gcA5057dlPiNw64IUALiwLlwS-TG1TEgcQcFdqiXqY7WP3x3j9J2jil2fvhoyi6A5Wqy5Zobt6HX3anNpXcukWor0yHkkqYJ71">
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg">Sarah</h5>
+<p class="text-on-surface-variant font-body-sm text-body-sm">October 2023</p>
+</div>
+</div>
+<p class="font-body-md text-body-md leading-relaxed italic">"The red walls and teal doors are even more beautiful in person! Such a unique stay in the center of Hanoi. Linh was an incredible host."</p>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-xl shadow-sm border border-outline-variant/30">
+<div class="flex items-center gap-stack-md mb-stack-md">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img data-alt="A profile photo of a male traveler named James for a property review. He looks professional and relaxed, photographed in a well-lit cafe setting with a modern, high-quality aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDbmmCLR0gmknnfVrV5_ULKrhfVxQ2fGra8cqw4AbQ5lg4Ua6O22oePLqtKGTkx7oLYxmVELlVv29HBC4VbiCX7bTwBktcHCq4Pg5GWmWrT5jJYE143EGuBs1B93FgSMZwAR3rYenIwhkMYwy8AqgoN1vsnwgpD3YZ0nv-InxKB4t1z7VkgL1mRXyaSVGHxoeV8ZWR1HQVrlEbyOWuUlj3XQ8N7kzP60j5EfD1nwvBHCa8n_mXLkQG9huwsCwrEKP0gyxbqV1Ckhaw">
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg">James</h5>
+<p class="text-on-surface-variant font-body-sm text-body-sm">September 2023</p>
+</div>
+</div>
+<p class="font-body-md text-body-md leading-relaxed italic">"Location is perfect for walking to the park. The apartment is very quiet despite being in a central area. Highly recommend for business travelers."</p>
+</div>
+</div>
+<button class="mt-stack-lg w-full border border-primary text-primary py-stack-md rounded-lg font-label-lg text-label-lg">
+                Show all reviews
+            </button>
+</section>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile py-stack-xl flex flex-col items-center gap-stack-lg bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant">
+<div class="flex flex-col items-center gap-stack-sm">
+<span class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed">Hanoi Autumn</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center">Luxury stays curated for the discerning traveler.</p>
+</div>
+<div class="grid grid-cols-2 gap-stack-xl w-full text-center sm:text-left">
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-lg text-label-lg text-primary">Destinations</span>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Old Quarter</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">West Lake</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Hai Bà Trưng</a>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<span class="font-label-lg text-label-lg text-primary">Company</span>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">About Us</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Careers</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Support</a>
+</div>
+</div>
+<div class="flex flex-col items-center gap-stack-md pt-stack-lg border-t border-outline-variant w-full">
+<div class="flex gap-stack-lg">
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Terms</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Privacy</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Legal</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant opacity-80">
+                    © 2024 Hanoi Autumn Luxury Stays. All rights reserved.
+                </p>
+</div>
+</footer>
+</main>
+<!-- Sticky Bottom Bar -->
+<nav class="fixed bottom-0 left-0 w-full h-24 bg-surface border-t border-outline-variant px-margin-mobile flex items-center justify-between z-50">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary">$65</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">night</span>
+</div>
+<button class="text-label-md text-label-md text-secondary underline">View calendar</button>
+</div>
+<button class="bg-secondary text-on-secondary px-gutter py-stack-md rounded-xl font-headline-sm text-headline-sm custom-shadow active:scale-95 transition-transform">
+            Reserve
+        </button>
+</nav>
+<script>
+        // Micro-interaction for the Reserve button
+        document.querySelector('button.bg-secondary').addEventListener('click', function() {
+            this.textContent = "Checking...";
+            setTimeout(() => {
+                this.textContent = "Reserve";
+            }, 1000);
+        });
+
+        // Simple scroll behavior for top bar
+        let lastScroll = 0;
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+            const header = document.querySelector('header');
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                header.style.transform = "translateY(-100%)";
+            } else {
+                header.style.transform = "translateY(0)";
+            }
+            header.style.transition = "transform 0.3s ease-in-out";
+            lastScroll = currentScroll;
+        });
+    </script>
+</body></html>

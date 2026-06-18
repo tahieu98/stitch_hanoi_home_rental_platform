@@ -1,0 +1,399 @@
+<!DOCTYPE html><html lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kết quả tìm kiếm - AutumnHanoi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f2f0f0",
+                    "surface-bright": "#fbf9f9",
+                    "surface-container": "#efeded",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "surface-container-low": "#f5f3f3",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-tertiary-container": "#4f3e00",
+                    "secondary": "#924a34",
+                    "inverse-primary": "#b8c8dc",
+                    "primary-fixed-dim": "#b8c8dc",
+                    "on-secondary-fixed-variant": "#753320",
+                    "on-surface": "#1b1c1c",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffe088",
+                    "outline-variant": "#c4c6cc",
+                    "surface": "#fbf9f9",
+                    "on-primary-fixed": "#0c1d2b",
+                    "on-primary-container": "#8292a5",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#fea186",
+                    "on-primary-fixed-variant": "#384858",
+                    "on-tertiary-fixed": "#241a00",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#d3e4f8",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e4e2e2",
+                    "surface-dim": "#dbdad9",
+                    "tertiary": "#735c00",
+                    "primary": "#051625",
+                    "background": "#fbf9f9",
+                    "on-background": "#1b1c1c",
+                    "outline": "#74777c",
+                    "on-secondary-fixed": "#3b0900",
+                    "primary-container": "#1b2b3a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#783522",
+                    "surface-container-high": "#e9e8e7",
+                    "inverse-surface": "#303031",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#506071",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#43474c",
+                    "surface-variant": "#e4e2e2",
+                    "secondary-fixed": "#ffdbd1",
+                    "tertiary-container": "#cca830"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-xl": "64px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "48px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "label-lg": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Hanken Grotesk"
+                    ],
+                    "display-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "headline-sm": [
+                            "Hanken Grotesk"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "label-lg": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "30px",
+                            {
+                                    "lineHeight": "38px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-md": [
+                            "36px",
+                            {
+                                    "lineHeight": "44px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-sm": [
+                            "20px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-md": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.04em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FAFAF8;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto bg-surface dark:bg-primary-container border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none">
+<div class="flex items-center gap-gutter">
+<a class="text-headline-md font-headline-md font-bold text-secondary dark:text-secondary-container" href="#">AutumnHanoi</a>
+</div>
+<div class="hidden md:flex items-center gap-margin-desktop">
+<nav class="flex gap-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-primary duration-200 transition-colors font-label-lg text-label-lg px-2 py-1 rounded" href="#">Become a Host</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-primary duration-200 transition-colors font-label-lg text-label-lg px-2 py-1 rounded" href="#">Help</a>
+</nav>
+</div>
+<div class="flex items-center gap-gutter">
+<button class="font-label-lg text-label-lg text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-primary duration-200 transition-colors px-4 py-2 rounded">Log In</button>
+<button class="bg-secondary text-on-secondary font-label-lg text-label-lg px-4 py-2 rounded hover:opacity-90 transition-opacity">Sign Up</button>
+</div>
+</header>
+<!-- Main Content Area - Split View -->
+<main class="flex-1 mt-20 flex overflow-hidden w-full max-w-container-max mx-auto">
+<!-- Left Side: Filters & List -->
+<div class="w-full lg:w-[60%] flex flex-col bg-background h-full">
+<!-- Filters Bar -->
+<div class="sticky top-0 z-10 bg-background/90 backdrop-blur-md px-margin-mobile md:px-margin-desktop py-stack-sm border-b border-outline-variant/30">
+<div class="flex items-center justify-between mb-stack-sm">
+<h1 class="font-headline-md text-headline-md text-on-background">300+ Căn hộ tại Hà Nội</h1>
+</div>
+<div class="flex gap-stack-sm overflow-x-auto hide-scrollbar pb-1">
+<button class="flex items-center gap-1 border border-outline-variant rounded-full px-4 py-1.5 font-label-md text-label-md text-on-surface hover:border-on-surface transition-colors bg-surface-container-lowest">
+                        Giá
+                        <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<button class="flex items-center gap-1 border border-outline-variant rounded-full px-4 py-1.5 font-label-md text-label-md text-on-surface hover:border-on-surface transition-colors bg-surface-container-lowest">
+                        Loại phòng
+                        <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<button class="flex items-center gap-1 border border-outline-variant rounded-full px-4 py-1.5 font-label-md text-label-md text-on-surface hover:border-on-surface transition-colors bg-surface-container-lowest">
+                        Tiện nghi
+                        <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<button class="flex items-center gap-1 border border-outline-variant rounded-full px-4 py-1.5 font-label-md text-label-md text-on-surface hover:border-on-surface transition-colors bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+                        Bộ lọc
+                    </button>
+</div>
+</div>
+<!-- Property List -->
+<div class="flex-1 overflow-y-auto p-margin-mobile md:p-margin-desktop space-y-stack-md hide-scrollbar">
+<!-- Card 1 -->
+<div class="group flex flex-col sm:flex-row bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-outline-variant/20 cursor-pointer">
+<div class="w-full sm:w-[300px] h-[200px] relative shrink-0">
+<img alt="Modern apartment interior" class="w-full h-full object-cover" data-alt="A bright, modern apartment interior in Hanoi featuring expansive floor-to-ceiling windows with a view of West Lake. The room is styled with contemporary minimalist furniture in neutral tones, accented by terracotta cushions. Soft, natural light floods the space, highlighting the polished hardwood floors and high-end finishes. The overall mood is luxurious and serene, fitting a premium hospitality brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq1jd2fKSUTi7nilKUbOq7I6paEV_6JnxG66HO-vT1uZmb2Spkcv8neT4K7f6jhOUl1U5Dk3wdpqapy6VfeWxVijtMb-4BlHATczUpQgoHOfMRuA2ptM7MPL8Kl0wckyUus1W_SztlEhGbqVx3rtFd7IqJ3aEaug3Ud8luKikmaEOFT4E4GrM4Us7DwaulOQ6LWqagqgFytoDB8OwSMcutxT6uQsZf7BAVvoxcZMsSV-FE-JwXBuSmyBP-U8Tqtuyp_G1thT4W5Dvh">
+<button class="absolute top-3 right-3 text-on-secondary hover:text-secondary-container transition-colors">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<div class="p-stack-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex justify-between items-start mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Toàn bộ căn hộ • Tây Hồ</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">4.9</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(120)</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2 group-hover:text-secondary transition-colors">Căn hộ view Hồ Tây tuyệt đẹp</h3>
+<div class="flex flex-wrap gap-2 mb-3">
+<span class="bg-[#F1F1F1] px-2 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">2 khách</span>
+<span class="bg-[#F1F1F1] px-2 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">1 phòng ngủ</span>
+<span class="bg-[#F1F1F1] px-2 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Ban công</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm">1.200.000đ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant"> / đêm</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col sm:flex-row bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-outline-variant/20 cursor-pointer">
+<div class="w-full sm:w-[300px] h-[200px] relative shrink-0">
+<img alt="Luxury suite bedroom" class="w-full h-full object-cover" data-alt="A luxurious bedroom suite in a high-end Ba Dinh property. The room features a plush king-sized bed with crisp white linens and deep indigo accent pillows. Soft ambient lighting creates a warm, inviting atmosphere, reflecting the refined tranquility of a Hanoi autumn. Elegant, modern Indochine design elements are visible in the wooden bed frame and bedside tables." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWqJIbZg7negtZGNUkbSwNX7-h_XprdiScN5_G_KfgFmhZjwBIIIfqhZXQ2BW8l1d3edXXzEHTe4-aAMBgtoVTP7f7H5vcKJr6g06yKj5pD7_g5EmHcYE50MNUbC2tLqzrWlb5yD9jl8AfO1bhe0r2M8h4nxQJ6v9bF3D5Era6HUv1olNC97X6v_AAORPuaW2BOpx-a6UX7XHKeIrbvEZIRg1kalxky9UqmQwJIBB4EXOcBXmJi1ubpDR3cS0I-35tmk6tPbIbFecZ">
+<div class="absolute top-3 left-3 bg-tertiary-container text-on-tertiary-container px-2 py-1 rounded font-label-md text-label-md">Verified</div>
+<button class="absolute top-3 right-3 text-on-secondary hover:text-secondary-container transition-colors">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<div class="p-stack-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex justify-between items-start mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Phòng cao cấp • Ba Đình</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">4.8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(85)</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2 group-hover:text-secondary transition-colors">Suite Sang Trọng Cạnh Lăng Bác</h3>
+<div class="flex flex-wrap gap-2 mb-3">
+<span class="bg-[#F1F1F1] px-2 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">2 khách</span>
+<span class="bg-[#F1F1F1] px-2 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Bếp nhỏ</span>
+<span class="bg-[#F1F1F1] px-2 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Wifi tốc độ cao</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm">1.500.000đ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant"> / đêm</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col sm:flex-row bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-outline-variant/20 cursor-pointer">
+<div class="w-full sm:w-[300px] h-[200px] relative shrink-0">
+<img alt="Cozy Hoan Kiem studio" class="w-full h-full object-cover" data-alt="A cozy, elegantly designed studio apartment in the heart of Hoan Kiem. The space uses a modern minimalist approach with warm wood tones and soft, white walls. A small reading nook by a window lets in diffused natural light. The aesthetic balances historical depth with modern luxury, characteristic of the AutumnHanoi brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv1np-rh6HqESULMRlSx2b8WPNp8--eqcw1yCSivD8zVXyN4v6qnTZPxNE5A421HxPSwoVURsBvMiTedcsrTxQwx25YUSERCMDCyrEM5UfWTYL6wrsIKeFeXNtO16nbcpoIqEgoDFPIZFvBcN_FDkdYAngmQFaN1IB8iOmEnQ8TzfcTTzi1cJuxYZjufkbFxhEKkuJS411m-cd57UzWqpbZ4D4mLt5BUqU_Qu5AYr21GBMZrCyGKklotZW6IXmKsAtIa0cxIv86X5n">
+<button class="absolute top-3 right-3 text-on-secondary hover:text-secondary-container transition-colors">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<div class="p-stack-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex justify-between items-start mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Studio • Hoàn Kiếm</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">4.95</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(210)</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2 group-hover:text-secondary transition-colors">Studio Phố Cổ Yên Tĩnh</h3>
+<div class="flex flex-wrap gap-2 mb-3">
+<span class="bg-[#F1F1F1] px-2 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">2 khách</span>
+<span class="bg-[#F1F1F1] px-2 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Máy giặt</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm">950.000đ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant"> / đêm</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Map -->
+<div class="hidden lg:block w-[40%] h-full relative border-l border-outline-variant/30">
+<!-- Simulated Map Image -->
+<img alt="Map of Hanoi" class="w-full h-full object-cover filter grayscale opacity-80" data-alt="A top-down stylized map view of Hanoi, Vietnam. The map is rendered in a modern minimalist style, utilizing subtle grays and off-whites to match the design system's tonal layers. Gentle terracotta and deep indigo pin markers highlight premium property locations. The visual approach is clean, professional, and avoids clutter." data-location="Hanoi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-gq9NLriZDAG8WoTDSU-sRPkpMx2gjKwxFN8wQgrZcLVXlUNoGYoJf1hnO1kgr4ry4NMXwbMfgUOGf9GYuzxRNbc4RDi6040BJy1VlSbyxX9eeTojgfKwSrhxrI0ZIH5vpe4rICBC3K_SPgoFxU8d1V2hATonuwWqIFJcvhxffbr6bxo9YVNlYHTuuxRAMHA3d4PFTVLz9iZcGG1RidiJg1TdlQ4vo7wljTamoRzlBoe9dn4juaSy4Vn8-pW8pDqRW9vbtuiQhaRv">
+<!-- Floating Map Pins (Simulated) -->
+<div class="absolute top-[30%] left-[40%] bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-md font-label-lg text-label-lg text-on-surface font-bold border border-outline-variant/20 hover:scale-105 transition-transform cursor-pointer">1.2tr</div>
+<div class="absolute top-[45%] left-[60%] bg-secondary text-on-secondary px-3 py-1.5 rounded-full shadow-md font-label-lg text-label-lg font-bold hover:scale-105 transition-transform cursor-pointer z-10">1.5tr</div>
+<div class="absolute top-[60%] left-[35%] bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-md font-label-lg text-label-lg text-on-surface font-bold border border-outline-variant/20 hover:scale-105 transition-transform cursor-pointer">950k</div>
+<div class="absolute top-[20%] left-[55%] bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-md font-label-lg text-label-lg text-on-surface font-bold border border-outline-variant/20 hover:scale-105 transition-transform cursor-pointer">2.1tr</div>
+<!-- Map Controls -->
+<div class="absolute right-4 bottom-4 flex flex-col gap-2">
+<button class="bg-surface-container-lowest p-2 rounded-lg shadow-sm border border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="bg-surface-container-lowest p-2 rounded-lg shadow-sm border border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+</div>
+</main>
+
+
+<footer class="w-full py-stack-xl px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline">
+<div class="col-span-1 md:col-span-1">
+<span class="text-headline-sm font-headline-sm font-bold text-secondary dark:text-secondary-fixed mb-4 block">AutumnHanoi</span>
+<p class="font-body-sm text-body-sm text-primary dark:text-primary-fixed opacity-80">© 2024 AutumnHanoi Luxury Rentals. Curated hospitality in the Heart of Vietnam.</p>
+</div>
+<div class="flex flex-col space-y-2">
+<h4 class="font-label-md text-label-md text-primary dark:text-primary-fixed font-semibold mb-2">Destinations</h4>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Hoan Kiem Stays</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Tay Ho Lakeside</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Ba Dinh Suites</a>
+</div>
+<div class="flex flex-col space-y-2">
+<h4 class="font-label-md text-label-md text-primary dark:text-primary-fixed font-semibold mb-2">Company</h4>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">About Us</a>
+</div>
+<div class="flex flex-col space-y-2">
+<h4 class="font-label-md text-label-md text-primary dark:text-primary-fixed font-semibold mb-2">Legal</h4>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="#">Privacy Policy</a>
+</div>
+</footer></body></html>

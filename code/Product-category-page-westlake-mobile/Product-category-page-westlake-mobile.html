@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tay Ho Lakeside - AutumnHanoi Luxury Rentals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-surface-variant": "#43474c",
+                "surface-container-highest": "#e4e2e2",
+                "surface-container": "#efeded",
+                "inverse-surface": "#303031",
+                "on-secondary": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "secondary": "#924a34",
+                "background": "#fbf9f9",
+                "primary-container": "#1b2b3a",
+                "error-container": "#ffdad6",
+                "surface-dim": "#dbdad9",
+                "surface-bright": "#fbf9f9",
+                "on-surface": "#1b1c1c",
+                "surface-variant": "#e4e2e2",
+                "on-background": "#1b1c1c",
+                "surface-container-high": "#e9e8e7",
+                "on-tertiary-fixed-variant": "#574500",
+                "on-primary-fixed-variant": "#384858",
+                "on-secondary-container": "#783522",
+                "outline": "#74777c",
+                "secondary-container": "#fea186",
+                "primary-fixed-dim": "#b8c8dc",
+                "tertiary-fixed-dim": "#e9c349",
+                "on-tertiary-container": "#4f3e00",
+                "on-tertiary-fixed": "#241a00",
+                "surface-tint": "#506071",
+                "tertiary": "#735c00",
+                "secondary-fixed": "#ffdbd1",
+                "tertiary-fixed": "#ffe088",
+                "surface-container-low": "#f5f3f3",
+                "on-error": "#ffffff",
+                "on-error-container": "#93000a",
+                "surface-container-lowest": "#ffffff",
+                "inverse-on-surface": "#f2f0f0",
+                "on-secondary-fixed": "#3b0900",
+                "surface": "#fbf9f9",
+                "on-secondary-fixed-variant": "#753320",
+                "on-primary": "#ffffff",
+                "inverse-primary": "#b8c8dc",
+                "primary-fixed": "#d3e4f8",
+                "tertiary-container": "#cca830",
+                "on-primary-fixed": "#0c1d2b",
+                "primary": "#051625",
+                "secondary-fixed-dim": "#ffb5a0",
+                "error": "#ba1a1a",
+                "outline-variant": "#c4c6cc",
+                "on-primary-container": "#8292a5"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "stack-sm": "8px",
+                "stack-md": "16px",
+                "stack-lg": "32px",
+                "gutter": "24px",
+                "margin-desktop": "48px",
+                "margin-mobile": "16px",
+                "container-max": "1280px",
+                "base": "8px",
+                "stack-xl": "64px"
+            },
+            "fontFamily": {
+                "headline-sm": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "label-lg": ["Inter"],
+                "display-lg": ["Hanken Grotesk"],
+                "body-lg": ["Inter"],
+                "body-sm": ["Inter"],
+                "headline-lg": ["Hanken Grotesk"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-md": ["Hanken Grotesk"],
+                "label-md": ["Inter"],
+                "display-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "headline-lg": ["30px", {"lineHeight": "38px", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "display-md": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .soft-shadow {
+            box-shadow: 0 4px 20px -2px rgba(5, 22, 37, 0.08);
+        }
+        .bento-inner-border {
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+        }
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm flex items-center justify-between px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-stack-sm active:scale-95 duration-150 cursor-pointer">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">menu</span>
+</div>
+<div class="font-headline-md text-headline-md font-bold text-secondary dark:text-secondary-fixed">
+            AutumnHanoi
+        </div>
+<div class="flex items-center gap-stack-sm active:scale-95 duration-150 cursor-pointer">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">account_circle</span>
+</div>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[530px] w-full overflow-hidden flex items-end">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A cinematic, wide-angle shot of West Lake in Hanoi during the golden hour of an autumn evening. The water is calm and reflects the soft orange and pink hues of the sunset. Traditional Vietnamese architectural elements are visible in the distance, partially veiled by a gentle mist. The overall mood is serene, luxurious, and peaceful, perfectly capturing the high-end hospitality brand's aesthetic of modern Indochine tranquility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo6WLc5H-t740MI7GTLrAlkuHCjoU8Z6k4d38DEFzD5UJx8QZql6vvIWSli89A2hu5H4iWMR574BNVlTAkevoZCbGFXKjx9RMa1efztciF5pf1dwrTUuRlMUx18ZtfqTVTncSv4qImP4Zx-93_bDlHCPsi0Ic5z1FbzXiVrdCOqjnQUc4JDkySNebnwlShwhDwQKh_2IEtWsCk4XozHearabIZECanfpwWIeXv22NKb4tzSwCKRQ5pf-ra63-uVyNNf2dXgp8jq9an"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile pb-stack-xl">
+<span class="inline-block px-3 py-1 mb-stack-md bg-secondary text-on-secondary rounded-full font-label-md text-label-md uppercase tracking-wider">
+                    Lakeside Collection
+                </span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-white leading-tight">
+                    Tay Ho - Lakeside Serenity &amp; Modern Living
+                </h1>
+</div>
+</section>
+<!-- Search & Filter Area -->
+<section class="px-margin-mobile -mt-8 relative z-20">
+<div class="bg-white rounded-xl soft-shadow p-stack-md flex flex-col gap-stack-md border border-outline-variant">
+<div class="grid grid-cols-2 gap-stack-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Check-in</label>
+<div class="flex items-center gap-2 p-2 border border-outline-variant rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[18px]">calendar_today</span>
+<span class="text-body-sm font-body-sm">Oct 12</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Check-out</label>
+<div class="flex items-center gap-2 p-2 border border-outline-variant rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[18px]">calendar_month</span>
+<span class="text-body-sm font-body-sm">Oct 19</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface-variant">Price Range</label>
+<span class="font-label-md text-label-md text-secondary">$200 - $850+</span>
+</div>
+<input class="w-full accent-secondary" max="1000" min="200" step="50" type="range"/>
+</div>
+<button class="w-full bg-secondary text-on-secondary py-3 rounded-lg font-label-lg text-label-lg active:scale-[0.98] transition-transform">
+                    Find Your Sanctuary
+                </button>
+</div>
+</section>
+<!-- Lakeside Rentals Section -->
+<section class="mt-stack-xl px-margin-mobile">
+<div class="flex justify-between items-end mb-stack-lg">
+<div>
+<p class="text-secondary font-label-lg text-label-lg uppercase tracking-widest mb-2">Curated Stays</p>
+<h2 class="font-headline-md text-headline-md text-primary">Premium Lakeside Rentals</h2>
+</div>
+</div>
+<!-- Property Stack -->
+<div class="flex flex-col gap-stack-lg">
+<!-- Card 1 -->
+<div class="bg-white rounded-xl overflow-hidden soft-shadow border border-outline-variant transition-all">
+<div class="relative aspect-[4/3] w-full">
+<img class="w-full h-full object-cover" data-alt="A stunning interior view of a luxury penthouse in Tay Ho, Hanoi. The room features high ceilings and floor-to-ceiling windows overlooking West Lake. The decor is a refined blend of modern minimalism and Indochine style, with dark wood accents, plush neutral-toned furniture, and warm ambient lighting. A balcony with premium outdoor seating offers a direct view of the serene water. The atmosphere is sophisticated, airy, and exceptionally peaceful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT-vCLLKsjaU4lAALD__JLkpKs1hq7f1iegMi3Rik554SLm0n-Djps3m-ZfR9aMGPoDlt6wjnRPufY40JHTj2Ys_2gCaXfecY-L7fezBfh8R4QxE5t7AoDASAWu2ykz3CZPMse0DxnuhH2AwYdwol5eMGUCbFjIXAEcuBun1PuzlTOiKeZAuWud4wY71aNJenxL2lFVSji3JKwvtgEmfAE6qIUNIcQUDtc8GgnHdaGyHPPYlw6FhCgL8tD_MFD9HQFX-lMiXxSnOEk"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-label-md">4.9</span>
+</div>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="bg-primary/80 backdrop-blur-sm text-white px-2 py-1 rounded-md font-label-md text-[10px] uppercase">Verified</span>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-md font-label-md text-[10px] uppercase">Lakeside</span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">The Lotus Penthouse</h3>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-secondary">$450</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">/night</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-body-sm text-body-sm">Quang An, Tay Ho</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">bed</span>
+<span class="text-label-md font-label-md">3 Beds</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">bathtub</span>
+<span class="text-label-md font-label-md">2 Baths</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">square_foot</span>
+<span class="text-label-md font-label-md">180m²</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-xl overflow-hidden soft-shadow border border-outline-variant transition-all">
+<div class="relative aspect-[4/3] w-full">
+<img class="w-full h-full object-cover" data-alt="An elegantly designed modern suite featuring soft cerulean blue accents and high-end natural materials like bamboo and stone. The room is bathed in soft, natural morning light filtering through sheer curtains. A private balcony overlooks a quiet, leafy street in Tay Ho. The style is boutique luxury, combining traditional Vietnamese craftsmanship with contemporary hospitality design. The mood is calm, refreshing, and inviting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7Jk5v_SLWFZ6S7VNhWv5bgBz-9l2koVn-6KR8Sp4eGCGJjvG-G-zUR5lFXbwFAhrdVGIYvGBxk-Qe0PHRvxWHN2QNMUukO4melsh-5h8daFWK1saM9vOQr9tyOTyr2RLDNzPySroYWl_AJN6nPEhtvkn82zbd92lWZCPdGgMR7gCpzkUbxz17ETPOpqLjI34EQLwTBfFfuRTmXnzqRaPjphaF9kR44vkXmiTAIxa1zLYcVsmnaHLOXRt3yO4ML4nqcZsCGRM-5R1Z"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-label-md">4.8</span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Cerulean Suite</h3>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-secondary">$280</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">/night</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-body-sm text-body-sm">To Ngoc Van, Tay Ho</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">king_bed</span>
+<span class="text-label-md font-label-md">1 Bed</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">balcony</span>
+<span class="text-label-md font-label-md">Lake View</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-xl overflow-hidden soft-shadow border border-outline-variant transition-all">
+<div class="relative aspect-[4/3] w-full">
+<img class="w-full h-full object-cover" data-alt="A luxury villa nestled in a lush garden setting near the edge of West Lake. The architecture is a fusion of French colonial and modern styles, with large terraces and terracotta roof tiles. Warm lighting illuminates the exterior stone walls and carefully landscaped tropical plants. The image conveys a sense of exclusive privacy, historical depth, and high-end residential comfort. The overall atmosphere is warm, distinguished, and deeply welcoming." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiH0IDq5eTktjgFjszYPv0Wae4CRNFS0GtfOIbgWg3HENMr_ukhhirHl3hNG2GsGYGB3LXX2S72EVDvi4eq2r3H2NbYkXfPCL8Lql_WOkI2YcqgnUbz0mxfSitnWmSbOTWzG2yg4rqdDN6otRA9YzcmgN4f9JCDWB1vI98PR8RIl_FteJNOtQ3TBdn9O4v4FohnM8cwWpSq5HFXFPb2cFiAHmSz7FKccqFr07cvfxsb-Nzctd-DrZut8H3xk0uex4CVysSrIjBW20J"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-label-md">5.0</span>
+</div>
+<span class="absolute top-3 left-3 bg-secondary text-white px-2 py-1 rounded-md font-label-md text-[10px] uppercase">Rare Find</span>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Autumn Breeze Villa</h3>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-secondary">$820</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">/night</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-body-sm text-body-sm">Xuan Dieu, Tay Ho</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">villa</span>
+<span class="text-label-md font-label-md">4 Beds</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">pool</span>
+<span class="text-label-md font-label-md">Private Pool</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Amenities Section -->
+<section class="mt-stack-xl px-margin-mobile py-stack-xl bg-surface-container-low border-y border-outline-variant">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-lg text-center">Tailored for Comfort</h2>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="flex flex-col items-center gap-2 p-stack-md bg-white rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-[32px]">wifi</span>
+<span class="font-label-lg text-label-lg text-primary text-center">High-Speed Fiber</span>
+</div>
+<div class="flex flex-col items-center gap-2 p-stack-md bg-white rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-[32px]">cleaning_services</span>
+<span class="font-label-lg text-label-lg text-primary text-center">Daily Housekeeping</span>
+</div>
+<div class="flex flex-col items-center gap-2 p-stack-md bg-white rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-[32px]">local_cafe</span>
+<span class="font-label-lg text-label-lg text-primary text-center">Premium Pantry</span>
+</div>
+<div class="flex flex-col items-center gap-2 p-stack-md bg-white rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-[32px]">concierge</span>
+<span class="font-label-lg text-label-lg text-primary text-center">24/7 Concierge</span>
+</div>
+</div>
+</section>
+<!-- Neighborhood Discovery -->
+<section class="mt-stack-xl px-margin-mobile mb-stack-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-lg">Discover the Neighborhood</h2>
+<div class="relative w-full aspect-video rounded-xl overflow-hidden border border-outline-variant">
+<!-- Map Placeholder -->
+<img class="w-full h-full object-cover opacity-80" data-alt="A stylized, illustrative map view of the Tay Ho (West Lake) district in Hanoi. The map features prominent landmarks like Tran Quoc Pagoda, various lakeside cafes, and luxury residential areas highlighted with soft, glowing icons. The color palette is composed of elegant blues for the water, lush greens for the trees, and subtle parchment tones for the land, maintaining the premium Indochine branding. The visual style is clean, informative, and artistically sophisticated." data-location="Tay Ho, Hanoi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnpR0G5qLaxUtWVw1SStupXSyjyw1lYSLlOX1zWcQwOd6qqmfqv52eNV2pC6wOHBQPM0FqpcOncR7iKwwPVXvE_HwIKr0CJHuuPodMXRFHOVviYXLjJFmwZc7kMFE7pIpI3khjDCguYUYI-gj96OxmO2KjCP78NBklDmv5oJxNzFs6vfVDnaDC2krpSAvx9qFrLnoHfcHXRflVz4G8WTYP18EuA7744Tfd9ekqT4Dstn09bSOD1ZTvbj7F6gC2jicgkxJy137IpiBs"/>
+<div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+<div class="bg-white/95 px-6 py-4 rounded-full soft-shadow flex items-center gap-3 active:scale-95 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-secondary">explore</span>
+<span class="font-label-lg text-label-lg text-primary">Explore Interactive Map</span>
+</div>
+</div>
+</div>
+<div class="mt-stack-md flex flex-col gap-stack-sm">
+<p class="text-body-sm font-body-sm text-on-surface-variant">Tay Ho is Hanoi's most vibrant expatriate hub, offering a harmonious blend of cultural landmarks, upscale dining, and breathtaking lake views.</p>
+<div class="flex gap-2 overflow-x-auto py-2">
+<span class="whitespace-nowrap px-4 py-2 bg-surface-container rounded-full text-label-md font-label-md text-on-surface-variant">Café Culture</span>
+<span class="whitespace-nowrap px-4 py-2 bg-surface-container rounded-full text-label-md font-label-md text-on-surface-variant">Lakeside Dining</span>
+<span class="whitespace-nowrap px-4 py-2 bg-surface-container rounded-full text-label-md font-label-md text-on-surface-variant">Ancient Temples</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-stack-xl bg-primary-container dark:bg-black border-t border-outline-variant flex flex-col gap-stack-md px-margin-mobile py-stack-lg w-full">
+<div class="font-headline-sm text-headline-sm text-secondary-container">
+            AutumnHanoi
+        </div>
+<div class="flex flex-col gap-stack-sm">
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Properties</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">About Us</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Neighborhood Guide</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Contact</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Terms of Service</a>
+</div>
+<div class="font-body-sm text-body-sm text-on-primary-container dark:text-on-primary opacity-60">
+            © 2024 AutumnHanoi Luxury Rentals. Inspired by the soul of Hanoi.
+        </div>
+</footer>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 right-0 h-16 bg-white/95 backdrop-blur-md border-t border-outline-variant grid grid-cols-4 items-center md:hidden z-50">
+<button class="flex flex-col items-center justify-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-label-md">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-secondary font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-[10px] font-label-md">Explore</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-label-md">Wishlist</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-[10px] font-label-md">Inbox</span>
+</button>
+</nav>
+<script>
+        // Micro-interaction for property cards
+        document.querySelectorAll('.soft-shadow').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.classList.add('scale-[0.98]');
+            });
+            card.addEventListener('touchend', () => {
+                card.classList.remove('scale-[0.98]');
+            });
+        });
+    </script>
+</body></html>

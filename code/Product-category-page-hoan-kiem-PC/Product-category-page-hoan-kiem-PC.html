@@ -1,0 +1,385 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>AutumnHanoi | Hoan Kiem Luxury Heritage Stays</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e4e2e2",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#0c1d2b",
+                    "surface-dim": "#dbdad9",
+                    "surface-container": "#efeded",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "tertiary": "#735c00",
+                    "background": "#fbf9f9",
+                    "secondary-container": "#fea186",
+                    "secondary": "#924a34",
+                    "secondary-fixed": "#ffdbd1",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "primary-container": "#1b2b3a",
+                    "on-secondary-fixed": "#3b0900",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#1b1c1c",
+                    "inverse-surface": "#303031",
+                    "outline": "#74777c",
+                    "primary-fixed": "#d3e4f8",
+                    "outline-variant": "#c4c6cc",
+                    "on-secondary-fixed-variant": "#753320",
+                    "on-secondary-container": "#783522",
+                    "surface-tint": "#506071",
+                    "surface": "#fbf9f9",
+                    "on-tertiary-fixed": "#241a00",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-surface-variant": "#43474c",
+                    "primary": "#051625",
+                    "on-primary-container": "#8292a5",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffe088",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "tertiary-container": "#cca830",
+                    "surface-container-high": "#e9e8e7",
+                    "on-primary-fixed-variant": "#384858",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#b8c8dc",
+                    "on-background": "#1b1c1c",
+                    "surface-container-low": "#f5f3f3",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#b8c8dc",
+                    "surface-bright": "#fbf9f9",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#4f3e00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-xl": "64px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "base": "8px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "display-md": ["Hanken Grotesk"],
+                    "label-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "display-md": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["30px", {"lineHeight": "38px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-card-shadow {
+            box-shadow: 0 4px 20px rgba(5, 22, 37, 0.15);
+        }
+        .inner-border {
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+        }
+        .indochine-pattern {
+            background-image: radial-gradient(#924a34 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto bg-surface border-b border-outline-variant shadow-sm transition-all duration-300" id="main-nav">
+<div class="text-headline-md font-headline-md font-extrabold text-secondary tracking-tight">
+            AutumnHanoi
+        </div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-lg text-label-lg text-secondary border-b-2 border-secondary pb-1" href="#">Hoan Kiem Stays</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary duration-200 transition-colors" href="#">Become a Host</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary duration-200 transition-colors" href="#">Help</a>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="hidden sm:block font-label-lg text-label-lg px-4 py-2 text-secondary hover:bg-surface-container-low transition-colors duration-200 rounded-lg">Log In</button>
+<button class="bg-secondary text-on-secondary px-6 py-2.5 rounded-lg font-label-lg text-label-lg hover:opacity-90 active:scale-95 transition-all duration-150">Sign Up</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[870px] flex items-center pt-20">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A cinematic, low-angle view of Hanoi Old Quarter's historic colonial architecture at dawn. Soft golden sunlight filters through ancient banyan trees, casting long shadows across the textured, weathered yellow walls of a French Indochine villa. The scene captures the serene, misty atmosphere of a Hanoi autumn morning with a sophisticated color palette of deep terracotta, soft ochre, and dark indigo. The composition is artistic and minimalist, emphasizing the heritage and luxury of the location." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpor5c8ThfrM9JBxKzr5xO0lHYC4T-k0l2W4-1-ZCOWOqG7feRLpEPshUkn6G6qBV7h3_k_LHtkSZs-Ex2iapM2ZTPECE_spyVnebDerRfn0BGY8RoapZJjT1jd8QkmCzC6lGqCAgWdprb3vapUvEc6NqlVskyVHbxvfLiJul4C0SAoed0rGSKeG2LCMid3LGMbLgbyJXqV4ZNhIF0i0BEiFiYPrE1YttgSa2RZVLzBC7d0-GyQdljImULVD4PHaYy28O_Mmt3HojA">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<span class="inline-block py-1 px-3 bg-tertiary-container text-on-tertiary-container font-label-md text-label-md rounded-full mb-stack-md uppercase tracking-widest">District Highlight</span>
+<h1 class="font-display-lg text-display-lg text-white mb-stack-md leading-tight">
+                    Hoan Kiem — The Heart of Hanoi's Heritage
+                </h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-stack-lg max-w-lg">
+                    Explore curated stays amidst centuries-old architecture and vibrant street life. Experience the ultimate intersection of luxury and tradition.
+                </p>
+<div class="flex gap-stack-md">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-label-lg text-label-lg flex items-center gap-2 hover:opacity-95 shadow-xl transition-all">
+                        Discover Stays
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Interactive Filter Bar -->
+<section class="sticky top-20 z-40 bg-surface/95 backdrop-blur-md border-b border-outline-variant py-4 px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row md:items-center justify-between gap-gutter">
+<div class="flex items-center gap-gutter overflow-x-auto pb-2 md:pb-0 no-scrollbar">
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant cursor-pointer hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span class="font-label-md text-label-md">Price Range</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant cursor-pointer hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+<span class="font-label-md text-label-md">Room Type</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant cursor-pointer hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-md text-label-md">Luxury Verified</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant cursor-pointer hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-[18px]">pool</span>
+<span class="font-label-md text-label-md">Amenities</span>
+</div>
+</div>
+<div class="relative flex items-center bg-white border border-outline-variant rounded-xl px-4 py-2 w-full md:w-64 focus-within:border-secondary transition-colors">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-body-sm font-body-sm placeholder:text-outline" placeholder="Search heritage homes..." type="text">
+</div>
+</div>
+</section>
+<!-- Main Content: Listings Grid -->
+<main class="py-stack-xl px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-stack-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Featured Heritage Rentals</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Exceptional properties selected for architectural significance and premium comfort.</p>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-secondary font-label-lg text-label-lg cursor-pointer hover:underline">
+                View all in Hoan Kiem
+                <span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-stack-xl">
+<!-- Listing 1 -->
+<div class="group flex flex-col bg-white rounded-xl overflow-hidden luxury-card-shadow transition-transform hover:-translate-y-2 cursor-pointer">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover inner-border transition-transform duration-500 group-hover:scale-110" data-alt="A luxury French colonial villa suite in Hanoi Hoan Kiem, featuring high ceilings, dark hardwood floors, and Indochine-style shutters. The room is decorated with minimalist silk textiles in terracotta tones and a large ceramic vase with fresh lilies. Soft, warm morning light creates a peaceful, hospitable atmosphere. The photographic style is high-end architectural photography with a focus on tactile materials and pristine white walls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHew7xGR2rzya7tv87R2PEVB7mH8mt5_d-kQPbOWUP9Y0ehSE7BVDKaCc74VSistSPw_fu4I0moBK1WPT9x-3APyk9ppiYgCZdd1n8y2AUxCoIxAKMChLkPB7O7_pMVwcyE0n7spekuErn8jPleP4K2me7_mzyGh1nBCFK4eyfXZZJZ4uwobiJiB3ttR-dihksLDIAm4cH6OA-sFt7vRdnh2sxQyzJzipKjf-qNJBp-TTAlQd1tExuPVqiCaw4Zar6UEB3IGS4lfPf">
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full font-label-md text-label-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-weight="fill">star</span>
+                            4.98
+                        </span>
+</div>
+<div class="absolute top-4 right-4">
+<button class="bg-white/80 backdrop-blur-sm p-2 rounded-full text-secondary hover:bg-white transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg font-label-md text-label-md text-primary-fixed-variant">LUXURY VERIFIED</span>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">The Indochine Loft</h3>
+<p class="font-headline-sm text-headline-sm text-secondary">$340<span class="text-label-md font-normal text-on-surface-variant"> / night</span></p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">A restored 1920s penthouse overlooking St. Joseph's Cathedral.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">2 Bedrooms</span>
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Private Terrace</span>
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Airport Shuttle</span>
+</div>
+</div>
+</div>
+<!-- Listing 2 -->
+<div class="group flex flex-col bg-white rounded-xl overflow-hidden luxury-card-shadow transition-transform hover:-translate-y-2 cursor-pointer">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover inner-border transition-transform duration-500 group-hover:scale-110" data-alt="A contemporary master bedroom in a Hanoi boutique hotel, designed with a blend of modern minimalism and traditional Vietnamese craftsmanship. The headboard is made of hand-woven rattan, contrasted against a deep indigo feature wall. Large windows open to a private balcony with lush tropical plants. The lighting is low-key and atmospheric, highlighting the rich textures of the soft linen bedding in earthy terracotta and beige tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9tDuEFw5FlYyjMXJzTo0yXcnuq71HMmhrKWDy82nA_TnT8DfWoVXV9yiHNmfHtFl14aqFgJTsBQKzErbmOJvAIGNzDGiYA99SMlIfWfE-7nPclDUsSnOBvlrp8mSKYuXDLfuVd-b03ctP0WKXfksZEfLK5V0D7Ie7x7Ss25pNZcFR4l4mtW7eOw33QKMLpz584G07Pdp_bjQ0rUbLx_q5e1f9F3bO28jPDJmWosbXRXLJHwUpNKdlCeHrIO0Uuj5z5AMlD2vFXlgp">
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full font-label-md text-label-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-weight="fill">star</span>
+                            4.92
+                        </span>
+</div>
+<div class="absolute top-4 right-4">
+<button class="bg-white/80 backdrop-blur-sm p-2 rounded-full text-secondary hover:bg-white transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Ly Thai To Suite</h3>
+<p class="font-headline-sm text-headline-sm text-secondary">$285<span class="text-label-md font-normal text-on-surface-variant"> / night</span></p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Modernist suite with bespoke bamboo furnishings near Hoan Kiem Lake.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">1 Bedroom</span>
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Workspace</span>
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Lake View</span>
+</div>
+</div>
+</div>
+<!-- Listing 3 -->
+<div class="group flex flex-col bg-white rounded-xl overflow-hidden luxury-card-shadow transition-transform hover:-translate-y-2 cursor-pointer">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover inner-border transition-transform duration-500 group-hover:scale-110" data-alt="An expansive open-plan luxury living room in an upscale Hanoi residence. High-quality marble floors reflect the warm light from a designer brass chandelier. The decor is a curated mix of mid-century modern furniture and antique Vietnamese pottery. Large floor-to-ceiling glass doors lead to a sun-drenched courtyard. The palette is dominated by neutral whites, soft greys, and warm wood accents, creating an elegant and hospitable Indochine interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqWWOGOVi4pq4tNPmY9DFZ2jwB6FVrVPYP4nMeqc1a5VbsXMekSSEx9U6VW89JjJQfi8Ngz3M1Yxhp6HNjgI3EamTywQfChUWkdBk7ndFdkdaBrrF6mD_dg-RCadqvWCj32o0OqAjQvDcAvknxetdnwGMNivtRCYsJKmkPZxudE_LO-MYRqT3zkcQ5t1ocwHwYI0p12BSGi6NgyTT0fInOfoVj4bCtizNxL2rWTB0ObYktZfdA5NB1mIh4EMVF9qrxwN6ce1D9VQbz">
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full font-label-md text-label-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-weight="fill">star</span>
+                            5.00
+                        </span>
+</div>
+<div class="absolute top-4 right-4">
+<button class="bg-white/80 backdrop-blur-sm p-2 rounded-full text-secondary hover:bg-white transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Heritage Courtyard Villa</h3>
+<p class="font-headline-sm text-headline-sm text-secondary">$510<span class="text-label-md font-normal text-on-surface-variant"> / night</span></p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">A private oasis hidden in the labyrinth of the Old Quarter.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">3 Bedrooms</span>
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Private Pool</span>
+<span class="bg-surface-container px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Full Staff</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bento Grid Context Section -->
+<section class="py-stack-xl bg-surface-container-low relative overflow-hidden">
+<div class="absolute inset-0 indochine-pattern"></div>
+<div class="relative px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-lg text-center">Beyond Your Doorstep</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[600px]">
+<div class="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A busy, vibrant street scene in Hanoi's Old Quarter at dusk. Street vendors with conical hats carry baskets of colorful flowers, while vintage motorbikes weave through narrow lanes lined with colonial houses. The glowing lanterns from street-side cafes cast a warm, hospitable orange light. The photography is dynamic and cinematic, capturing the raw energy and heritage of Hoan Kiem with a rich, high-contrast aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3GnEU-iA081sz6TztK_KOhClV8xaTBS5QV3yA3ulZ0HvWg4DReKDL94sOlxgG2MVO6Ad6qlV1v6FgW0AlfXQVghWNqVbxmCBIIeOr5bbJ0yb3mGUIvClmi_6mmiM_c5J4Pvdzvb6ARzNmLb7Alwv21bAzSiVa8voQfAAKDNLZGEbtz0__mDLUtQ6IC1nWgYkVRYgDGlC7_zCCMDnuEtjhnOxtaGyQv63ijH59SL-qnXJDfAQlDk4EPOmpIDfTiO8ZlaFq2WuruLPN">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-stack-md">
+<h4 class="font-headline-md text-headline-md text-white">The Old Quarter Pulse</h4>
+<p class="font-body-md text-body-md text-white/80">Step into a living museum of 36 trade streets.</p>
+</div>
+</div>
+<div class="md:col-span-2 relative rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An artistic view of a peaceful courtyard in a traditional Vietnamese teahouse. Ancient bonsai trees sit on weathered stone plinths, and a small koi pond reflects the surrounding greenery. The architecture features dark wood beams and intricate lattice screens. The mood is tranquil and zen-like, with a soft-focus background and a sophisticated palette of deep greens and natural wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRdMBBeAlVsONUq5xYcooOOJUIOVpXBwJ8CatcCypbZCUoBDsj_rPFCIXtyiLRTt_XxZPMD-S1CIZt8Qm7MtzWUUuY2LQ8fCxgREscr-TTqIwVeWnyk2imWlnPYXyq77hQ3WPOuQefTqhJpDPRCVpkhU4Yo237hIXdK0K9GKuVdxoDHjEHPsGvZg4H2BB7b1PQsS-e01feLtU8vsD57Az7ljL8K1b1TwGpQYhGvR-wjBhUPfvaSpGaX_BS9CkrFwh2Pg7LN-1eHQIq">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-stack-md">
+<h4 class="font-headline-sm text-headline-sm text-white">Hidden Tea Houses</h4>
+<p class="font-body-sm text-body-sm text-white/80">Secret sanctuaries for traditional brew.</p>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A close-up shot of architectural details on a French Indochine villa in Hanoi. Intricate wrought iron balconies and peeling yellow plaster create a beautiful, historical texture. Lush tropical ferns hang from the balcony, and a warm afternoon sun highlights the craftsmanship of a bygone era. The style is minimalist and architectural, focusing on historical depth and elegant decay." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYFqY3hSCSxYs-J-peK8WH_hYilZi7m_OikKa-4S2ZEc39YXvqsPjKjeMLM3f5QFFsrSQnTIbBEz_rE1Ho19egH0MgQvOuHAtnwZUOIaixZvqVwSc1xDj47mCMfaqbk__8UPTkdFlX6RI5TgIyI3r0zcs6tFA-VuvuzmcsLBOTK-70QkgR19ee3z4JZUum-gtuvDLhkuaRZ4FFNqtXI9gLwKY2OWXU3j23uJJPPHpqvQBcepJbzHhA2OdkrI9FaC_IE58stB7LN4w-">
+</div>
+<div class="relative rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="The iconic Turtle Tower at Hoan Kiem Lake, Hanoi, viewed through the branches of a weeping willow tree. The scene is shrouded in a light autumn mist, creating a soft, ethereal glow. The lighting is diffused and calm, with a palette of cool greys and soft muted greens. This iconic heritage landmark is captured in a serene, professional landscape photograph style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADKsN-ISVrKiU7CRIvBbonVXh0SEIzMaXQO3VK47Q3hdKYO1GI9eBu9V7EYgaVrBn-PWtS56jUQ9RfISsALq7PZ0LorMjj4U9JLUnOR7mZ9b3UxIHvZejQgBQthlJd0gCC6bNXKs2X9LggklfipQK9YbKx3cMYDeZ7Zmud8oLae8dyfMZZXasZkT0Zj7Qh9OEBoulVS7lyX1XGYn4Rg7ZkqsV1SiP_Cz0b3x0yYARQts9u2WH73fRGDcJou1gASpAZMYUkIpaF4PA7">
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-stack-xl px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto bg-surface-container-highest border-t border-outline-variant">
+<div class="md:col-span-1">
+<div class="text-headline-sm font-headline-sm font-bold text-secondary mb-4">AutumnHanoi</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 AutumnHanoi Luxury Rentals. Curated hospitality in the Heart of Vietnam.</p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-4">Popular Districts</h5>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Hoan Kiem Stays</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Tay Ho Lakeside</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Ba Dinh Suites</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-4">Company</h5>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">About Us</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-4">Stay Inspired</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Join our newsletter for curated Hanoi travel guides.</p>
+<div class="flex">
+<input class="bg-white border border-outline-variant rounded-l-lg px-4 py-2 w-full focus:ring-1 focus:ring-secondary focus:border-secondary outline-none" placeholder="Email address" type="email">
+<button class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-primary-container transition-colors">Join</button>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll interaction for Nav
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'h-16', 'bg-white/95', 'backdrop-blur-md');
+                nav.classList.remove('h-20', 'bg-surface');
+            } else {
+                nav.classList.remove('py-2', 'h-16', 'bg-white/95', 'backdrop-blur-md');
+                nav.classList.add('h-20', 'bg-surface');
+            }
+        });
+
+        // Simple listing card interactions
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Potential JS driven micro-interactions
+            });
+        });
+    </script>
+</body></html>

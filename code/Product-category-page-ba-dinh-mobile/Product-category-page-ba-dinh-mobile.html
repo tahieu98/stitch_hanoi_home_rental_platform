@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ba Dinh Elegance | AutumnHanoi Luxury Rentals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#43474c",
+                    "surface-container-highest": "#e4e2e2",
+                    "surface-container": "#efeded",
+                    "inverse-surface": "#303031",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#924a34",
+                    "background": "#fbf9f9",
+                    "primary-container": "#1b2b3a",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dbdad9",
+                    "surface-bright": "#fbf9f9",
+                    "on-surface": "#1b1c1c",
+                    "surface-variant": "#e4e2e2",
+                    "on-background": "#1b1c1c",
+                    "surface-container-high": "#e9e8e7",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "on-primary-fixed-variant": "#384858",
+                    "on-secondary-container": "#783522",
+                    "outline": "#74777c",
+                    "secondary-container": "#fea186",
+                    "primary-fixed-dim": "#b8c8dc",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-tertiary-container": "#4f3e00",
+                    "on-tertiary-fixed": "#241a00",
+                    "surface-tint": "#506071",
+                    "tertiary": "#735c00",
+                    "secondary-fixed": "#ffdbd1",
+                    "tertiary-fixed": "#ffe088",
+                    "surface-container-low": "#f5f3f3",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-secondary-fixed": "#3b0900",
+                    "surface": "#fbf9f9",
+                    "on-secondary-fixed-variant": "#753320",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#b8c8dc",
+                    "primary-fixed": "#d3e4f8",
+                    "tertiary-container": "#cca830",
+                    "on-primary-fixed": "#0c1d2b",
+                    "primary": "#051625",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c4c6cc",
+                    "on-primary-container": "#8292a5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "stack-xl": "64px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-md": ["Hanken Grotesk"],
+                    "label-md": ["Inter"],
+                    "display-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["30px", {"lineHeight": "38px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-md": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shadow {
+            box-shadow: 0 4px 20px rgba(5, 22, 37, 0.15);
+        }
+        .inner-border {
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar Shell Component -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm flex items-center justify-between px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-150" data-icon="menu">menu</span>
+<span class="font-headline-md text-headline-md font-bold text-secondary">AutumnHanoi</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-150" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[530px] w-full overflow-hidden">
+<div class="absolute inset-0 bg-primary/40 z-10"></div>
+<img alt="Ba Dinh Heritage" class="absolute inset-0 w-full h-full object-cover" data-alt="A cinematic wide shot of a grand tree-lined boulevard in Hanoi's Ba Dinh district, featuring preserved French colonial villas with yellow ochre walls and green shutters. The morning sun filters through ancient banyan trees, creating a dappled light effect on the quiet, wide streets. The atmosphere is quiet, prestigious, and deeply historical, emphasizing a luxury heritage travel aesthetic with soft, warm autumnal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_K5t7xE_YxZwsqxlnO6AhHuMborK_kAwzW1urCpxMoZDRlLfmEKBexzfOAaqMV7Mq6lJ6q6v4kOY5K292tI5F453UC5W0Pmb2NItbpkvruamCNFeFFU0v6ky9zxdcsSB5JxwGTUw_jfIgzXjfDBmqXtBq_HR1ZvcHZDP4gtun1s2m0Ack6iez810aVsaWHIt_tB8U3EwFWqcKMThLqh4q-7-uiGYEYYIIzVhaz1k2hC7CTVJ3G3fYFsFKTlduYTDCnRPr9DG3eLR6"/>
+<div class="absolute inset-0 z-20 flex flex-col justify-end p-margin-mobile pb-stack-xl">
+<span class="text-secondary font-label-lg uppercase tracking-widest mb-2">Category</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-white leading-tight mb-4">Ba Dinh – Elegance &amp; Cultural Grandeur</h1>
+<p class="text-white/90 font-body-md max-w-[85%]">Reside in the heart of Hanoi's diplomatic quarter, where history meets contemporary luxury.</p>
+</div>
+</section>
+<!-- Filters & Sorting (Sticky-ish) -->
+<section class="sticky top-16 z-40 bg-background/95 backdrop-blur-sm px-margin-mobile py-stack-md border-b border-outline-variant flex gap-stack-sm overflow-x-auto hide-scrollbar">
+<button class="flex items-center gap-2 bg-surface border border-outline px-4 py-2 rounded-full whitespace-nowrap active:scale-95 transition-transform">
+<span class="font-label-md text-on-surface">Property Type</span>
+<span class="material-symbols-outlined text-base" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+<button class="flex items-center gap-2 bg-surface border border-outline px-4 py-2 rounded-full whitespace-nowrap active:scale-95 transition-transform">
+<span class="font-label-md text-on-surface">Price Range</span>
+<span class="material-symbols-outlined text-base" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+<button class="flex items-center gap-2 bg-surface border border-outline px-4 py-2 rounded-full whitespace-nowrap active:scale-95 transition-transform">
+<span class="font-label-md text-on-surface">Amenities</span>
+<span class="material-symbols-outlined text-base" data-icon="tune">tune</span>
+</button>
+</section>
+<!-- Luxury Rentals Section -->
+<section class="px-margin-mobile py-stack-lg flex flex-col gap-stack-lg">
+<div class="flex justify-between items-end">
+<h2 class="font-headline-md text-headline-md text-primary">Luxury Residences</h2>
+<span class="font-label-md text-secondary">6 Properties Found</span>
+</div>
+<!-- Vertical List of Property Cards -->
+<div class="grid grid-cols-1 gap-stack-lg">
+<!-- Card 1 -->
+<article class="bg-white rounded-xl overflow-hidden tonal-shadow">
+<div class="relative aspect-[4/3]">
+<img alt="The Governor’s Colonial Suite" class="w-full h-full object-cover inner-border" data-alt="A luxury colonial suite interior in Ba Dinh, Hanoi. The room features high ceilings, dark hardwood floors, and French-style windows opening to a private balcony with tropical foliage. A plush velvet sofa in deep ochre sits beside a mahogany writing desk. The lighting is soft and golden, capturing a refined, historical atmosphere with modern luxury comforts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADuV2bWAB9Tc4MpllO-W2HshUkW0Z7ffc7dFS6Bc52fHMZsXH9-4gyabK0Xn3zb1N012u2VCRxgDecLx0LnIp0lxxonkBp5P02Dqdk0N9chZlei0YEgjVYE-PoR6pbE_9e7fNjnlXdUKD1tsQxSBcN3Gic_s0a880ZF5bKRhQjbs7JvQeXWtVJKuxTqO5VGYHe2-c9UAIR7HTWpWmksXmk5S0MjpJebqSyjke3KyDoTBYuOdzkB8x0kmW5FzOSDheqV7dx-9TQyNbw"/>
+<span class="absolute top-4 right-4 bg-secondary text-white font-label-md px-3 py-1 rounded-full shadow-md">Verified</span>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">The Governor’s Colonial Suite</h3>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-md">4.9</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-sm mb-4">Phan Dinh Phung St • 2 BR • 140 m²</p>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-secondary">$3,200</span>
+<span class="font-label-md text-outline-variant">per month</span>
+</div>
+<button class="bg-primary text-white font-label-lg px-6 py-2 rounded-lg active:scale-95 transition-all">View</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-white rounded-xl overflow-hidden tonal-shadow">
+<div class="relative aspect-[4/3]">
+<img alt="Botanical Garden Penthouse" class="w-full h-full object-cover inner-border" data-alt="A modern penthouse with floor-to-ceiling glass windows overlooking the lush greenery of the Hanoi Botanical Garden. The interior is minimalist with white marble floors, gold accents, and a large terrace. Sunlight pours into the spacious living area, highlighting a curated collection of contemporary Vietnamese art. Luxurious, airy, and prestigious mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK0voXTRLwKrKCCmFw3wgN5IrYOSDCVJkNMioFJX_ycMMxXBLR6_WUcI2Oone0DVyMkR9Vn8BUN7zMoC0kWGLdpD3wWeerjW5B0p9k9bMP6p-H6-orlbDWf0J_9spXrKeB-RvmSAFF08ygdWvDO0Hsm8NiT5zhqPLBf572XQxjq6R3rhl3xhngk8vm4I-LTLxxV-9T1fYbiQTooLDKLVHvDDABvJKkXesfTYB53YiX8IrNq1vJHd5NkWQuIPEYuk8amITvOwR6dAuT"/>
+<span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-primary font-label-md px-3 py-1 rounded-full border border-outline-variant">Near Park</span>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">Botanical Garden Penthouse</h3>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-md">5.0</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-sm mb-4">Hoang Hoa Tham St • 3 BR • 220 m²</p>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-secondary">$5,500</span>
+<span class="font-label-md text-outline-variant">per month</span>
+</div>
+<button class="bg-primary text-white font-label-lg px-6 py-2 rounded-lg active:scale-95 transition-all">View</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-white rounded-xl overflow-hidden tonal-shadow">
+<div class="relative aspect-[4/3]">
+<img alt="Diplomatic Quarter Studio" class="w-full h-full object-cover inner-border" data-alt="A chic, high-end studio apartment in the diplomatic district of Ba Dinh. The space features large windows with views of quiet, tree-lined streets. Interior design is a mix of Mid-century modern and Indochine style, with a comfortable leather armchair and silk pillows. The vibe is professional, safe, and sophisticated for solo luxury travelers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKj-Lf71a47_-hLTal4bnpXLAXcET3Ftvci0FgI2ic8SfQi7c8-MW40Mc40QifVEwKw5jD1NKFDrHGzNc6pIQFmweuY2YnMprR7JqdjI7_YDxCezA-zl0Pc67Oinr7QKfZN2vj4_vVZYNzXkfG8GBEQNs25zrGdsDAHLXYzzMtdtfi2tSm6bjn9LmtaIO3fproHbc2BpYnPtXoBFxpADpEJQd1FRuVw-wcTtHA-VnxOIqHRkoQUglIyKY78VzPqbIXukJfDLLQEl5b"/>
+</div>
+<div class="p-stack-md">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">Diplomatic Quarter Studio</h3>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="font-label-md">4.8</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-sm mb-4">Kim Ma Envoy • 1 BR • 65 m²</p>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-secondary">$1,850</span>
+<span class="font-label-md text-outline-variant">per month</span>
+</div>
+<button class="bg-primary text-white font-label-lg px-6 py-2 rounded-lg active:scale-95 transition-all">View</button>
+</div>
+</div>
+</article>
+<!-- More Cards (Briefly rendered for scroll length) -->
+<div class="grid grid-cols-1 gap-stack-lg opacity-90">
+<article class="bg-white rounded-xl overflow-hidden tonal-shadow">
+<div class="relative aspect-[4/3] bg-surface-container-high">
+<img alt="The Sanctuary Villa" class="w-full h-full object-cover" data-alt="An exclusive private villa in Ba Dinh tucked away behind a traditional gate. The villa features a private courtyard with a lotus pond and bonsai trees. Architecture is classical French Colonial with modernized interiors including a private wine cellar and wellness room. Quiet, serene, and incredibly prestigious atmosphere with lush green shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBny_yxiztWyfWiCa1JLedxcZDsbQtbTAd2tChI2SB2dBvesshHe2T6DBUu63QIMu2ggt39pJf37KhY1CdOCavU5YeXt_GWfdxxJ5sjPYMuFm_a_1VM-MmW5qr6Uk3ws86yFUkwG6_4DUl_wnvJ5QBPDqVlnpWpdf7vBfuR-HBy4kxs_zqK--O0esCPhCNJQW3_Dl-gaRY-yAYfaHmKk5CZA4z2WxYKKT3tAW85AoVow8qC_a6vnQ-1WPhN6wOb6M_MBq4dfDavf1Fj"/>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-sm text-headline-sm text-primary">The Sanctuary Villa</h3>
+<p class="text-on-surface-variant font-body-sm">$7,200 / month</p>
+</div>
+</article>
+<article class="bg-white rounded-xl overflow-hidden tonal-shadow">
+<div class="relative aspect-[4/3] bg-surface-container-high">
+<img alt="Artisan Heritage Loft" class="w-full h-full object-cover" data-alt="A spacious loft in a repurposed heritage building in Ba Dinh. Exposed brick walls, high timber-beamed ceilings, and floor-to-ceiling windows. The decor includes antique Vietnamese pottery and bespoke furniture made from reclaimed wood. The lighting is warm and industrial-chic, creating a unique artisanal luxury feel for creative residents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABJEjXHqWQXJI3lAoxqVoG1YnviY9Y-iCyfuVfatMe2Qb578pogdnGo1J_SBcjVLOPwV8WsEN1koMFP57HPBISQIm6dmuhUTfEupOw6-b2O_8bduRNrw3pXN_1wZipjaATUJklr5vaPs7Cltuw3wAd63xzaIYpI-7fFp8ng6phrQh45tdZGogAnbVpgUhDDpKer8lcKhIi4E_GtMiOAmHTZxTB9QI0C8LskztjFxD04PWUHxz4etAvbgKzW3NzgZxLHu3WI0hIQCNz"/>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-sm text-headline-sm text-primary">Artisan Heritage Loft</h3>
+<p class="text-on-surface-variant font-body-sm">$2,400 / month</p>
+</div>
+</article>
+</div>
+</div>
+<button class="w-full py-4 border border-outline text-primary font-label-lg rounded-xl mt-4 active:bg-surface-container transition-colors">Load More Properties</button>
+</section>
+<!-- The Ba Dinh Experience Section -->
+<section class="bg-primary-container text-on-primary-container px-margin-mobile py-stack-xl">
+<h2 class="font-headline-lg text-headline-lg text-white mb-stack-lg">The Ba Dinh Experience</h2>
+<div class="flex flex-col gap-stack-md">
+<!-- Highlight Card 1 -->
+<div class="group relative bg-white/5 rounded-2xl p-stack-md border border-white/10 overflow-hidden">
+<div class="flex items-start gap-stack-md">
+<div class="bg-secondary-container/20 p-3 rounded-xl">
+<span class="material-symbols-outlined text-secondary-container" data-icon="forest">forest</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-white mb-1">Grand Boulevards</h3>
+<p class="text-white/70 font-body-sm">Stroll through the widest, most peaceful green corridors in the city center.</p>
+</div>
+</div>
+</div>
+<!-- Highlight Card 2 -->
+<div class="group relative bg-white/5 rounded-2xl p-stack-md border border-white/10 overflow-hidden">
+<div class="flex items-start gap-stack-md">
+<div class="bg-secondary-container/20 p-3 rounded-xl">
+<span class="material-symbols-outlined text-secondary-container" data-icon="museum">museum</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-white mb-1">Cultural Proximity</h3>
+<p class="text-white/70 font-body-sm">Steps away from the Citadel, Temple of Literature, and Presidential Palace.</p>
+</div>
+</div>
+</div>
+<!-- Highlight Card 3 -->
+<div class="group relative bg-white/5 rounded-2xl p-stack-md border border-white/10 overflow-hidden">
+<div class="flex items-start gap-stack-md">
+<div class="bg-secondary-container/20 p-3 rounded-xl">
+<span class="material-symbols-outlined text-secondary-container" data-icon="restaurant">restaurant</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-white mb-1">Elite Dining</h3>
+<p class="text-white/70 font-body-sm">Home to Michelin-recommended Vietnamese fine dining and diplomat bistros.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Experience Imagery Bento-style (Mobile adapted) -->
+<div class="grid grid-cols-2 gap-stack-md mt-stack-xl h-64">
+<div class="rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of a luxury table setting in a colonial-style restaurant in Ba Dinh, Hanoi. Fine china, crystal glassware, and white linen napkins. In the background, soft warm lighting illuminates a wall of historical photographs. High-end dining atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpVLnJbRyU_k7MQo3KkrBk52pcDR08OS2_G98v6QwPsFBkihK2JnOmNAbmCHzCiSGW80mJQqH5VFN-PxMZnZQr-cSLi4e0uXTGM4fKjJKQ7tYcImRy8lBfPsZxJ-wZpBPY5SXGXxCXuVLYE0IENXAeBZPt607OoIk7njLL6wjL5QGQrfdL3DA5U6qPBZX_N78rb1ynnMy1wEPnW8iGEOWEUnDJp_1HIfB1riWPpMNmPDBV09rbw4S8sy2wfVCJ0903hJFkTYn1JIIK"/>
+</div>
+<div class="flex flex-col gap-stack-md">
+<div class="h-1/2 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A serene temple courtyard in Hanoi with ancient architectural details and grey stone statues. Moss-covered roofs and a single red lantern hanging. Calm, spiritual, and culturally rich atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvc6inGutsmqRXh9yX4dKc_-EodMiL8_BxBRvQdyNwb0ZuIavzXS4_ba3skveEbRwe6ChLzsa94xrDY9MuClu9jnNOssRFrqM6wHO1r2UFLBN3mZgEurR6zrjzgr9AOYWjP7f-uzCXSo8lPNUtJWw53XdnKXNH0DOeznPPyP4u22FPN6bWNeSg1tjwxysAiUxeQmXSMJfARmPOhlnRJ6hybrFGVB0skRc5wN0CVIz5Z4LW2PCZkH1QmRGgMs2_hcdFB4NUgiFG0Fnr"/>
+</div>
+<div class="h-1/2 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Lush green canopy of ancient banyan trees over a quiet street in Ba Dinh. Sunlight filters through the leaves creating sharp rays of light. Peaceful and prestigious neighborhood feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4TO6oDXXOUeOgaAjhP-wzrWrOsSFG8TTNRGgRmI-8rejWPsir_sKZe-fUWkEqZOhAlU1nnIKw4txRAJh1nT7PrcCoG_wOgGjnyMehpZUviSdv9ttJEpK2HmpwagP4PsXI9dlMzLjuH8VY77H0Wz_NYToShUnLblQavj7cxmvxSmY1LEFsKOMNGmcdnRHEemBCJEhAtpmx-F_4ck0zhl-bv83upmN1XdsQNwE1v7Zedke_UQnrZhFBMerbIbJyMDAGIG4t00g3xoAK"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="px-margin-mobile py-stack-xl text-center bg-white">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Join the Elite Circle</h2>
+<p class="text-on-surface-variant font-body-md mb-stack-lg">Receive exclusive previews of heritage properties before they hit the market.</p>
+<div class="flex flex-col gap-stack-sm">
+<input class="w-full px-4 py-3 border border-outline rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all" placeholder="Your email address" type="email"/>
+<button class="bg-secondary text-white font-label-lg py-4 rounded-xl active:scale-95 transition-transform">Request Membership</button>
+</div>
+</section>
+</main>
+<!-- Footer Shell Component -->
+<footer class="w-full mt-stack-xl bg-primary-container dark:bg-black border-t border-outline-variant flex flex-col gap-stack-md px-margin-mobile py-stack-lg w-full">
+<div class="mb-4">
+<span class="font-headline-sm text-headline-sm text-secondary-container">AutumnHanoi</span>
+<p class="text-on-primary-container/80 font-body-sm mt-2">Curated luxury rentals for the discerning global traveler in Vietnam's capital.</p>
+</div>
+<nav class="grid grid-cols-2 gap-y-4 gap-x-8">
+<a class="text-on-primary-container/80 font-body-sm hover:text-secondary-container transition-colors" href="#">Properties</a>
+<a class="text-on-primary-container/80 font-body-sm hover:text-secondary-container transition-colors" href="#">About Us</a>
+<a class="text-on-primary-container/80 font-body-sm hover:text-secondary-container transition-colors" href="#">Neighborhood Guide</a>
+<a class="text-on-primary-container/80 font-body-sm hover:text-secondary-container transition-colors" href="#">Contact</a>
+<a class="text-on-primary-container/80 font-body-sm hover:text-secondary-container transition-colors" href="#">Terms of Service</a>
+</nav>
+<div class="flex gap-4 mt-4 border-t border-white/10 pt-6">
+<span class="material-symbols-outlined text-on-primary-container/60 cursor-pointer" data-icon="public">public</span>
+<span class="material-symbols-outlined text-on-primary-container/60 cursor-pointer" data-icon="mail">mail</span>
+<span class="material-symbols-outlined text-on-primary-container/60 cursor-pointer" data-icon="share">share</span>
+</div>
+<p class="text-on-primary-container/60 font-body-sm mt-stack-md text-[12px]">
+            © 2024 AutumnHanoi Luxury Rentals. Inspired by the soul of Hanoi.
+        </p>
+</footer>
+<!-- Bottom Navigation Shell (Mobile) -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md flex justify-around items-center h-16 border-t border-outline-variant md:hidden">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px] font-label-md">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary font-bold transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="location_on" data-weight="fill">location_on</span>
+<span class="text-[10px] font-label-md">Neighborhoods</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-[10px] font-label-md">Saved</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-[10px] font-label-md">Concierge</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions for scrolling
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 100) {
+                header.classList.add('shadow-md');
+                header.style.backgroundColor = 'rgba(251, 249, 249, 0.95)';
+            } else {
+                header.classList.remove('shadow-md');
+                header.style.backgroundColor = 'rgba(251, 249, 249, 0.8)';
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Add active states to filters
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if(this.classList.contains('bg-surface')) {
+                    this.classList.toggle('bg-primary-fixed');
+                    this.classList.toggle('border-primary');
+                }
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Search Results - Hanoi Autumn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f5f3f3",
+                        "on-primary-fixed": "#0c1d2b",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#8292a5",
+                        "outline": "#74777c",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "surface": "#fbf9f9",
+                        "on-primary-fixed-variant": "#384858",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#b8c8dc",
+                        "tertiary-container": "#cca830",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#303031",
+                        "surface-dim": "#dbdad9",
+                        "secondary": "#924a34",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-container": "#783522",
+                        "secondary-fixed": "#ffdbd1",
+                        "primary-fixed-dim": "#b8c8dc",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-surface": "#1b1c1c",
+                        "on-secondary-fixed": "#3b0900",
+                        "surface-container": "#efeded",
+                        "on-tertiary-fixed": "#241a00",
+                        "tertiary": "#735c00",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#753320",
+                        "primary-fixed": "#d3e4f8",
+                        "tertiary-fixed": "#ffe088",
+                        "primary-container": "#1b2b3a",
+                        "inverse-on-surface": "#f2f0f0",
+                        "surface-tint": "#506071",
+                        "outline-variant": "#c4c6cc",
+                        "background": "#fbf9f9",
+                        "secondary-container": "#fea186",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e4e2e2",
+                        "surface-container-high": "#e9e8e7",
+                        "on-surface-variant": "#43474c",
+                        "primary": "#051625",
+                        "surface-bright": "#fbf9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-xl": "64px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-sm": ["Inter"],
+                        "display-md": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-md": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg": ["30px", {"lineHeight": "38px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 20px 0px rgba(5,22,37,0.15);
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 20px rgba(5, 22, 37, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased font-body-md flex flex-col min-h-screen pt-16">
+<!-- TopAppBar Component (from JSON) -->
+<header class="bg-surface dark:bg-surface-container-low docked full-width top-0 shadow-[0px_4px_20px_0px_rgba(5,22,37,0.15)] shadow-sm fixed left-0 w-full z-50 flex items-center justify-between px-margin-mobile h-16">
+<button aria-label="Menu" class="text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed">Hanoi Autumn</h1>
+<button aria-label="User profile" class="text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 duration-200 p-1 rounded-full overflow-hidden">
+<span class="material-symbols-outlined text-3xl" data-icon="account_circle">account_circle</span>
+</button>
+</header>
+<!-- Search/Filter Sticky Bar -->
+<div class="sticky top-16 z-40 bg-surface/90 backdrop-blur-md border-b border-outline-variant px-margin-mobile py-stack-sm flex items-center gap-base">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-xl font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-shadow" placeholder="Where to?" readonly="" type="text" value="Hanoi, Vietnam">
+</div>
+<button class="flex items-center justify-center p-2 rounded-xl border border-outline-variant text-primary hover:bg-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+<!-- Main Content: Search Results -->
+<main class="flex-1 px-margin-mobile py-stack-md flex flex-col gap-stack-lg pb-32">
+<!-- Result Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow flex flex-col">
+<div class="relative aspect-[4/3] w-full bg-surface-container-high">
+<img alt="Modern apartment living room" class="w-full h-full object-cover" data-alt="A bright, modern apartment interior in Hanoi showcasing a minimalist Indochine aesthetic. Soft, natural sunlight filters through large windows, illuminating a pristine white living space accented with warm terracotta cushions and deep indigo architectural details. The room features high-quality wooden furniture and subtle tactile textures, capturing a luxurious yet welcoming atmosphere typical of high-end hospitality design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1m-rEydAKbuwfSSH2qgo86QAbXCWlRfn8svNpKQI2H6UyEbdg_ZFEGMLjvXDLAnRru_bXk2o5Rqr5lIU66YyyWNVOVAOdcUGPx6yCQn-7bLYwZxa-4Iw4sewRjVoua01ZK71YsPHGlu0FkJxTcwKdv1UQFIjX9rGqGK5e1JONUqyBJ1PMJH4mnHYsLk3CH3ODM2uWTw-QVM0SAqcbsOrjBsE1r-CAGjMZP6o5PgGSX8ojmhGxsUDjkhvf8JBjIinrAh1vVPR_8AvS">
+<div class="absolute top-3 left-3 bg-tertiary-container/90 text-on-tertiary-container px-2 py-1 rounded-full font-label-md text-label-md flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                    Verified Luxury
+                </div>
+<button class="absolute top-3 right-3 p-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-primary hover:bg-surface-container-lowest transition-colors shadow-sm">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-2 border border-black/5 border-t-0 rounded-b-xl">
+<div class="flex justify-between items-start">
+<h2 class="font-headline-sm text-headline-sm text-primary line-clamp-1">The Hoan Kiem Suite</h2>
+<div class="flex items-center gap-1 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] icon-fill text-tertiary-container">star</span>
+<span class="">4.98</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">French Quarter, Hoan Kiem District</p>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="bg-[#F1F1F1] px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">1 bedroom</span>
+<span class="bg-[#F1F1F1] px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Balcony</span>
+<span class="bg-[#F1F1F1] px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Wifi</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary">$120</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ night</span>
+</div><button class="mt-2 flex items-center justify-center gap-2 w-full py-2 px-4 border border-outline text-primary rounded-xl font-label-lg text-label-lg hover:bg-surface-container-low transition-colors active:scale-95">
+    <span class="material-symbols-outlined text-[18px]">explore</span>
+    Directions
+</button>
+</div>
+</article>
+<!-- Result Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow flex flex-col">
+<div class="relative aspect-[4/3] w-full bg-surface-container-high">
+<img alt="Elegant bedroom interior" class="w-full h-full object-cover" data-alt="A serene and luxurious bedroom interior designed with modern minimalism and historical depth. The space features pure white walls and bedding, contrasted by deep indigo bed runners and warm terracotta accents. Generous whitespace around the frame emphasizes the sophisticated, uncluttered environment, lit by soft ambient lighting that evokes the tranquil feeling of a Hanoi autumn evening." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsBdqZiW97BwWawOP7xrtbbx66UpnvxF_8Y_KKqgEzE1XYZvSa9FrwvVOSbfBBsTKOBYoSQkvraEUksLOml2sk_mdQjl7vcE5g02T4J3F_7_jk3Yp79Y2yFAYp4wUMYwBzNADe5HXjeo4RAvMvsBCEvUe6eAhBXJYNRudbv2hUOCLd_CcjHLWQZ3l8CGWYBrIzNXUrzwrKNuqQxkuoU3w77v4GW1HAGXxiktP6uov8HLN-_QENoYzTrVJO8pmYj4f5oT1fbjLHaI2v">
+<button class="absolute top-3 right-3 p-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-primary hover:bg-surface-container-lowest transition-colors shadow-sm">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-2 border border-black/5 border-t-0 rounded-b-xl">
+<div class="flex justify-between items-start">
+<h2 class="font-headline-sm text-headline-sm text-primary line-clamp-1">West Lake Retreat</h2>
+<div class="flex items-center gap-1 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] icon-fill text-tertiary-container">star</span>
+<span class="">4.85</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Tay Ho District</p>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="bg-[#F1F1F1] px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">2 bedrooms</span>
+<span class="bg-[#F1F1F1] px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Lake View</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary">$185</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ night</span>
+</div><button class="mt-2 flex items-center justify-center gap-2 w-full py-2 px-4 border border-outline text-primary rounded-xl font-label-lg text-label-lg hover:bg-surface-container-low transition-colors active:scale-95">
+    <span class="material-symbols-outlined text-[18px]">explore</span>
+    Directions
+</button>
+</div>
+</article>
+<!-- Result Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow flex flex-col">
+<div class="relative aspect-[4/3] w-full bg-surface-container-high">
+<img alt="Stylish apartment balcony" class="w-full h-full object-cover" data-alt="An expansive, high-end apartment balcony overlooking a vibrant cityscape, styled with a modern, curated aesthetic. The scene incorporates tactile elements like woven rattan chairs and smooth, warm wooden decking against a backdrop of clean white architectural lines. Soft, diffused natural light enhances the premium, inviting atmosphere, perfectly aligning with a distinguished, hospitable brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDABusgpcaoYmhwBJD_ad4pfrVu3FYR7uSRoOXZ78gqnVY2JgGfhfMVf5bojqFPR0qezfSKzub_d5qR-Dkpdxx9E79NXXcF1iXucwdVsRosb3u_pd4t5eRAgGQRem_fKzQD8_UYSTO5hmqR-omwLnaJAQ-0o89WE0Gw1KbWxiB_exPwWmragt1GUwv7sqqheSHcYEkp9tK4_La3Nil_JL6zznCSzyADsbwLQ0qkpdmGsQs5JnaQY_lc24QhVB7pbtT9if3gKaKH7p7f">
+<div class="absolute top-3 left-3 bg-tertiary-container/90 text-on-tertiary-container px-2 py-1 rounded-full font-label-md text-label-md flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+                    Rare Find
+                </div>
+<button class="absolute top-3 right-3 p-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-primary hover:bg-surface-container-lowest transition-colors shadow-sm">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-2 border border-black/5 border-t-0 rounded-b-xl">
+<div class="flex justify-between items-start">
+<h2 class="font-headline-sm text-headline-sm text-primary line-clamp-1">Ba Dinh Heritage Loft</h2>
+<div class="flex items-center gap-1 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] icon-fill text-tertiary-container">star</span>
+<span class="">4.92</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Ba Dinh District</p>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="bg-[#F1F1F1] px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Studio</span>
+<span class="bg-[#F1F1F1] px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Historic</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary">$95</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ night</span>
+</div><button class="mt-2 flex items-center justify-center gap-2 w-full py-2 px-4 border border-outline text-primary rounded-xl font-label-lg text-label-lg hover:bg-surface-container-low transition-colors active:scale-95">
+    <span class="material-symbols-outlined text-[18px]">explore</span>
+    Directions
+</button>
+</div>
+</article>
+</main>
+<!-- Floating Map Button -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-40">
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-full flex items-center gap-2 shadow-[0_8px_30px_rgba(5,22,37,0.3)] hover:scale-105 active:scale-95 transition-transform duration-200">
+<span class="">Map</span>
+<span class="material-symbols-outlined text-[18px]">map</span>
+</button>
+</div>
+<!-- Footer Component -->
+<footer class="bg-surface-container-highest w-full px-margin-mobile py-stack-lg flex flex-col gap-stack-md mt-auto font-['Hanken_Grotesk']">
+<div class="flex flex-col gap-2 mb-2">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">AutumnHanoi</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm">© 2024 AutumnHanoi Luxury Rentals. Curated hospitality in the Heart of Vietnam.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-label-lg text-label-lg font-bold text-primary">Destinations</h3>
+<nav class="flex flex-col gap-1">
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-sm text-body-sm" href="#">Hoan Kiem Stays</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-sm text-body-sm" href="#">Tay Ho Lakeside</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-sm text-body-sm" href="#">Ba Dinh Suites</a>
+</nav>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<h3 class="font-label-lg text-label-lg font-bold text-primary">Company</h3>
+<nav class="flex flex-col gap-1">
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-sm text-body-sm" href="#">About Us</a>
+</nav>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<h3 class="font-label-lg text-label-lg font-bold text-primary">Legal</h3>
+<nav class="flex flex-col gap-1">
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-sm text-body-sm" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-sm text-body-sm" href="#">Privacy Policy</a>
+</nav>
+</div>
+</footer>
+
+
+</body></html>

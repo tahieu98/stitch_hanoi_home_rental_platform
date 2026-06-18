@@ -1,0 +1,387 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Checkout - Hanoi Autumn</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config injected from Brand Anchors -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f5f3f3",
+                    "on-primary-fixed": "#0c1d2b",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#8292a5",
+                    "outline": "#74777c",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "surface": "#fbf9f9",
+                    "on-primary-fixed-variant": "#384858",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#b8c8dc",
+                    "tertiary-container": "#cca830",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#ffb5a0",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#303031",
+                    "surface-dim": "#dbdad9",
+                    "secondary": "#924a34",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1c1c",
+                    "on-secondary-container": "#783522",
+                    "secondary-fixed": "#ffdbd1",
+                    "primary-fixed-dim": "#b8c8dc",
+                    "on-tertiary-container": "#4f3e00",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-surface": "#1b1c1c",
+                    "on-secondary-fixed": "#3b0900",
+                    "surface-container": "#efeded",
+                    "on-tertiary-fixed": "#241a00",
+                    "tertiary": "#735c00",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#753320",
+                    "primary-fixed": "#d3e4f8",
+                    "tertiary-fixed": "#ffe088",
+                    "primary-container": "#1b2b3a",
+                    "inverse-on-surface": "#f2f0f0",
+                    "surface-tint": "#506071",
+                    "outline-variant": "#c4c6cc",
+                    "background": "#fbf9f9",
+                    "secondary-container": "#fea186",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e4e2e2",
+                    "surface-container-high": "#e9e8e7",
+                    "on-surface-variant": "#43474c",
+                    "primary": "#051625",
+                    "surface-bright": "#fbf9f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-xl": "64px",
+                    "margin-desktop": "48px",
+                    "base": "8px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px",
+                    "gutter": "24px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-sm": ["Inter"],
+                    "display-md": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                    "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                    "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                    "display-md": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                    "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                    "headline-lg": ["30px", { "lineHeight": "38px", "fontWeight": "600" }]
+            }
+          }
+        }
+      }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom Soft Ambient Shadow for Level 1 Surfaces */
+        .shadow-ambient {
+            box-shadow: 0px 4px 20px 0px rgba(5, 22, 37, 0.08);
+        }
+
+        /* Floating Label Styles */
+        .floating-input:focus-within label,
+        .floating-input input:not(:placeholder-shown) + label {
+            transform: translateY(-120%) scale(0.85);
+            color: theme('colors.secondary');
+        }
+        
+        /* Hide scrollbar for clean horizontal scrolling if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Accordion transition */
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .accordion-content.open {
+            max-height: 1000px; /* Arbitrary large max-height */
+            opacity: 1;
+            padding-top: theme('spacing.stack-md');
+            padding-bottom: theme('spacing.stack-md');
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-icon.open {
+            transform: rotate(180deg);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pb-[120px]">
+<!-- Checkout Top Header (Transactional, minimal navigation) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin-mobile h-16 bg-surface-container-lowest shadow-[0px_4px_20px_0px_rgba(5,22,37,0.05)] border-b border-outline-variant/30">
+<button aria-label="Go back" class="w-10 h-10 flex items-center justify-center text-primary rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-primary flex-1 text-center pr-10">Secure Checkout</h1>
+</header>
+<main class="pt-20 px-margin-mobile max-w-container-max mx-auto">
+<!-- Progress Indicator -->
+<div class="flex items-center justify-center mb-stack-lg relative">
+<div class="absolute w-2/3 h-[2px] bg-outline-variant top-1/2 -translate-y-1/2 z-0"></div>
+<div class="absolute w-1/3 h-[2px] bg-secondary top-1/2 -translate-y-1/2 left-1/6 z-0 transition-all duration-500" style="left: 16%; width: 33%;"></div>
+<div class="flex justify-between w-3/4 relative z-10">
+<div class="flex flex-col items-center gap-1">
+<div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center font-label-md">
+<span class="material-symbols-outlined text-[14px]" data-icon="check">check</span>
+</div>
+<span class="font-label-md text-secondary">Details</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center font-label-md">2</div>
+<span class="font-label-md text-secondary">Payment</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-outline-variant text-on-surface-variant flex items-center justify-center font-label-md">3</div>
+<span class="font-label-md text-on-surface-variant">Confirm</span>
+</div>
+</div>
+</div>
+<!-- Accordion 1: Trip Details -->
+<section class="mb-stack-md bg-surface-container-lowest rounded-xl shadow-ambient overflow-hidden">
+<button class="w-full px-margin-mobile py-stack-md flex items-center justify-between focus:outline-none" onclick="toggleAccordion('trip-details')">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="luggage">luggage</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Trip Details</h2>
+</div>
+<span class="material-symbols-outlined text-outline accordion-icon open" data-icon="expand_more" id="icon-trip-details">expand_more</span>
+</button>
+<div class="accordion-content open px-margin-mobile border-t border-outline-variant/30" id="trip-details">
+<!-- Property Mini Card -->
+<div class="flex gap-4 mb-stack-md">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0 relative border border-black/5">
+<img alt="The Indochine Villa Exterior" class="w-full h-full object-cover" data-alt="A warm, inviting exterior shot of a luxury villa in Hanoi. The architecture blends French colonial elements with traditional Vietnamese woodwork. Soft, golden late-afternoon light filters through lush tropical foliage, casting gentle shadows on the pristine white facade. The atmosphere is serene and exclusive, emphasizing high-end hospitality in a modern minimalistic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgdJ25uJ6_x-UvJ7-cteXclc4APfqZzPXls-nPnibGSFG7eVUG5Ro8bWShcmZfRCYoP10rMvud2gcXRQERXvN100EZ_Mwa4nHlPiuN2wHGu3ptmlBQF6MXfVWx_aybabws3JLUpA1vXFRji_FmYcmLkQDC6h6Ciwmb991U_BQjU5y9ZogcX_MLU6tdcnifAHYKGXbnoWaOxxs2fsCmdMhkVhSd6iEpBBuLnJ_BwnXGRBiYKTBvxbT1_t1v7TonzEIDL506PpFpHayN">
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-md text-on-surface-variant uppercase tracking-wider mb-1">Entire Villa</span>
+<h3 class="font-headline-sm text-[18px] leading-tight text-primary mb-1">The Indochine Heritage Villa</h3>
+<p class="font-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span>
+                            Tay Ho District, Hanoi
+                        </p>
+</div>
+</div>
+<!-- Stay Details Grid -->
+<div class="grid grid-cols-2 gap-y-4 mb-stack-md bg-surface-container-low p-4 rounded-lg">
+<div>
+<p class="font-label-md text-on-surface-variant mb-1">Check-in</p>
+<p class="font-body-md text-primary font-medium">Oct 15, 2024</p>
+<p class="font-body-sm text-on-surface-variant">3:00 PM</p>
+</div>
+<div>
+<p class="font-label-md text-on-surface-variant mb-1">Check-out</p>
+<p class="font-body-md text-primary font-medium">Oct 18, 2024</p>
+<p class="font-body-sm text-on-surface-variant">11:00 AM</p>
+</div>
+<div class="col-span-2 border-t border-outline-variant/30 pt-3 mt-1">
+<p class="font-label-md text-on-surface-variant mb-1">Guests</p>
+<p class="font-body-md text-primary font-medium">2 Adults</p>
+</div>
+</div>
+<!-- Price Breakdown -->
+<div class="space-y-3 font-body-sm text-on-surface">
+<div class="flex justify-between">
+<span>$250 x 3 nights</span>
+<span>$750.00</span>
+</div>
+<div class="flex justify-between">
+<span>Cleaning fee</span>
+<span>$50.00</span>
+</div>
+<div class="flex justify-between">
+<span>Service fee</span>
+<span>$85.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Accordion 2: Payment Method -->
+<section class="mb-stack-md bg-surface-container-lowest rounded-xl shadow-ambient overflow-hidden">
+<button class="w-full px-margin-mobile py-stack-md flex items-center justify-between focus:outline-none" onclick="toggleAccordion('payment-method')">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="credit_card">credit_card</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Payment Method</h2>
+</div>
+<span class="material-symbols-outlined text-outline accordion-icon open" data-icon="expand_more" id="icon-payment-method">expand_more</span>
+</button>
+<div class="accordion-content open px-margin-mobile border-t border-outline-variant/30" id="payment-method">
+<!-- Payment Options -->
+<div class="space-y-3 mb-stack-md pt-2">
+<!-- Credit Card Option (Selected) -->
+<label class="flex items-center p-4 border border-secondary rounded-lg bg-secondary/5 cursor-pointer transition-colors relative overflow-hidden">
+<div class="absolute right-0 top-0 w-16 h-16 bg-secondary/10 rounded-bl-full -z-10"></div>
+<input checked="" class="w-5 h-5 text-secondary border-outline-variant focus:ring-secondary/50 focus:ring-offset-0 bg-transparent" name="payment" type="radio">
+<div class="ml-4 flex-1 flex items-center justify-between">
+<span class="font-body-md font-medium text-primary">Credit or Debit Card</span>
+<div class="flex gap-1">
+<!-- Visa/MC placeholders -->
+<div class="w-8 h-5 bg-surface-container-highest rounded border border-outline-variant/30"></div>
+<div class="w-8 h-5 bg-surface-container-highest rounded border border-outline-variant/30"></div>
+</div>
+</div>
+</label>
+<!-- Credit Card Form (Visible when CC selected) -->
+<div class="pl-9 pr-2 pb-2 space-y-4">
+<!-- Card Number -->
+<div class="relative floating-input bg-surface-container-lowest rounded-xl border border-outline-variant px-4 py-3 focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary transition-all">
+<input class="block w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body-md placeholder-transparent pt-4" id="cc-number" placeholder=" " type="text" value="•••• •••• •••• 4242">
+<label class="absolute left-4 top-3 text-on-surface-variant font-body-md transition-all origin-left pointer-events-none" for="cc-number">Card Number</label>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline-variant" data-icon="credit_card">credit_card</span>
+</div>
+<div class="flex gap-4">
+<!-- Expiry -->
+<div class="relative floating-input bg-surface-container-lowest rounded-xl border border-outline-variant px-4 py-3 focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary transition-all flex-1">
+<input class="block w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body-md placeholder-transparent pt-4" id="cc-exp" placeholder=" " type="text">
+<label class="absolute left-4 top-3 text-on-surface-variant font-body-md transition-all origin-left pointer-events-none" for="cc-exp">MM / YY</label>
+</div>
+<!-- CVV -->
+<div class="relative floating-input bg-surface-container-lowest rounded-xl border border-outline-variant px-4 py-3 focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary transition-all flex-1">
+<input class="block w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body-md placeholder-transparent pt-4" id="cc-cvv" placeholder=" " type="text">
+<label class="absolute left-4 top-3 text-on-surface-variant font-body-md transition-all origin-left pointer-events-none" for="cc-cvv">CVV</label>
+</div>
+</div>
+</div>
+<!-- Momo Option -->
+<label class="flex items-center p-4 border border-outline-variant rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="w-5 h-5 text-secondary border-outline-variant focus:ring-secondary/50 focus:ring-offset-0 bg-transparent" name="payment" type="radio">
+<div class="ml-4 flex-1 flex items-center justify-between">
+<span class="font-body-md text-primary">MoMo E-Wallet</span>
+<div class="w-8 h-8 rounded bg-[#A50064] text-white flex items-center justify-center font-bold text-[10px]">MoMo</div>
+</div>
+</label>
+<!-- Bank Transfer Option -->
+<label class="flex items-center p-4 border border-outline-variant rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="w-5 h-5 text-secondary border-outline-variant focus:ring-secondary/50 focus:ring-offset-0 bg-transparent" name="payment" type="radio">
+<div class="ml-4 flex-1 flex items-center justify-between">
+<span class="font-body-md text-primary">Bank Transfer</span>
+<span class="material-symbols-outlined text-outline" data-icon="account_balance">account_balance</span>
+</div>
+</label>
+</div>
+</div>
+</section>
+<!-- Trust Badge / Info -->
+<div class="flex items-center justify-center gap-2 text-on-surface-variant font-body-sm mb-8 opacity-80">
+<span class="material-symbols-outlined text-[16px]" data-icon="lock">lock</span>
+<span>Payments are secure and encrypted.</span>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-highest mt-stack-lg pt-stack-lg pb-stack-md px-margin-mobile font-['Hanken_Grotesk']">
+<div class="max-w-container-max mx-auto flex flex-col gap-stack-lg">
+<div>
+<h3 class="font-headline-md font-bold text-primary mb-2">AutumnHanoi</h3>
+<p class="font-body-md text-on-surface-variant">© 2024 AutumnHanoi Luxury Rentals. Curated hospitality in the Heart of Vietnam.</p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-3">
+<h4 class="font-label-lg font-bold text-primary uppercase tracking-wider">Destinations</h4>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Hoan Kiem Stays</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Tay Ho Lakeside</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Ba Dinh Suites</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-lg font-bold text-primary uppercase tracking-wider">Company</h4>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About Us</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-lg font-bold text-primary uppercase tracking-wider">Legal</h4>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Fixed Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container-lowest border-t border-outline-variant/20 shadow-[0px_-4px_20px_0px_rgba(5,22,37,0.05)] z-50 pb-safe">
+<div class="max-w-container-max mx-auto px-margin-mobile py-4 flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface-variant uppercase tracking-wider">Total (USD)</span>
+<span class="font-headline-md text-primary">$885.00</span>
+</div>
+<button class="flex-1 bg-secondary hover:bg-on-secondary-container text-white font-label-lg py-4 px-6 rounded-xl shadow-sm transition-all active:scale-95 flex items-center justify-center gap-2">
+<span>Confirm &amp; Pay</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Simple Script for Accordions -->
+<script>
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('open');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('open');
+            }
+        }
+    </script>
+</body></html>
