@@ -50,7 +50,7 @@ export function Hero() {
         {/* Search Bar */}
         <form
           onSubmit={handleSearch}
-          className="bg-white rounded-full p-2 mx-auto max-w-4xl flex flex-col md:flex-row items-center gap-0 shadow-card border border-black/5"
+          className="bg-white rounded-2xl md:rounded-full p-3 md:p-2 mx-4 md:mx-auto max-w-4xl flex flex-col md:flex-row items-stretch md:items-center gap-0 shadow-card border border-black/5"
         >
           {/* Location */}
           <div className="flex-1 w-full md:w-auto px-6 py-3 border-b md:border-b-0 md:border-r border-outline-variant/30 text-left">
@@ -75,7 +75,7 @@ export function Hero() {
               type="date"
               value={checkIn}
               onChange={(e) => setCheckIn(e.target.value)}
-              className="w-full bg-transparent border-none p-0 focus:ring-0 text-gray-900 font-semibold placeholder:font-normal placeholder:text-gray-400 text-sm outline-none [color-scheme:dark]"
+              className="w-full bg-transparent border-none p-0 focus:ring-0 text-gray-900 font-semibold placeholder:font-normal placeholder:text-gray-400 text-sm outline-none [color-scheme:light]"
             />
           </div>
 
@@ -88,7 +88,7 @@ export function Hero() {
               type="date"
               value={checkOut}
               onChange={(e) => setCheckOut(e.target.value)}
-              className="w-full bg-transparent border-none p-0 focus:ring-0 text-gray-900 font-semibold placeholder:font-normal placeholder:text-gray-400 text-sm outline-none [color-scheme:dark]"
+              className="w-full bg-transparent border-none p-0 focus:ring-0 text-gray-900 font-semibold placeholder:font-normal placeholder:text-gray-400 text-sm outline-none [color-scheme:light]"
             />
           </div>
 
