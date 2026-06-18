@@ -1,8 +1,9 @@
 import type { Property, Review, RatingBreakdown } from "@/types";
 import { getAmenities } from "./amenities";
+import { additionalPropertyImages } from "./property-gallery-images";
 import westLakeVillaGallery from "@/assets/properties/wl-002-gallery-16x9.jpg";
 
-export const properties: Property[] = [
+const baseProperties: Property[] = [
   // ─── HOAN KIEM ───────────────────────────────────────────────────────────
   {
     id: "hk-001",
@@ -721,6 +722,11 @@ export const properties: Property[] = [
     isVerified: true,
   },
 ];
+
+export const properties: Property[] = baseProperties.map((property) => ({
+  ...property,
+  images: [...property.images, ...additionalPropertyImages[property.id]],
+}));
 
 export function getProperty(id: string): Property | undefined {
   return properties.find((p) => p.id === id);
