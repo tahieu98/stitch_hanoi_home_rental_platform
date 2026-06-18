@@ -1,5 +1,6 @@
 import type { Property, Review, RatingBreakdown } from "@/types";
 import { getAmenities } from "./amenities";
+import westLakeVillaGallery from "@/assets/properties/wl-002-gallery-16x9.jpg";
 
 export const properties: Property[] = [
   // ─── HOAN KIEM ───────────────────────────────────────────────────────────
@@ -311,9 +312,7 @@ export const properties: Property[] = [
     rating: 4.99,
     reviewCount: 45,
     superhost: true,
-    images: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDMNLavmDwYJhc2Te_HycnNvWkzAg5oFJ5hFSySW3jtKq-mEPiYYBnJzqTlA01tjdQV19qgMjJvWZPcnE5ejtVi6MkUcNshJ0GYZfjCyapZSWcpPrvTZNLXQDJ4OquzRcOLnWAbh94b-Uh2AenV1_Mj9jG8fS5TTGFxBmsiWUklc38J07yEt_C_js1a0h0ZrK2VWXnlcbdva9WWQabrDOy1pEnI-5ZEn0jhL13r4jc4wQjBJzFTydXWoXEuWKv0bggyDvoQLnJpBvQh",
-    ],
+    images: [westLakeVillaGallery],
     amenities: getAmenities(["wifi", "ac", "kitchen", "washer", "tv", "pool", "garden", "parking", "balcony", "hot_tub", "workspace", "coffee", "iron", "hair_dryer", "airport_transfer", "concierge"]),
     houseRules: ["Không hút thuốc", "Giữ khu vườn sạch sẽ", "Không tiệc tùng"],
     host: {

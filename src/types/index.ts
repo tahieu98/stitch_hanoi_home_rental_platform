@@ -1,5 +1,7 @@
 import type { StaticImageData } from "next/image";
 
+export type ImageSource = string | StaticImageData;
+
 export interface Property {
   id: string;
   slug: string;
@@ -21,7 +23,7 @@ export interface Property {
   rating: number;
   reviewCount: number;
   superhost: boolean;
-  images: string[];
+  images: ImageSource[];
   amenities: Amenity[];
   houseRules: string[];
   host: Host;
