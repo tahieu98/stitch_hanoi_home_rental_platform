@@ -14,8 +14,10 @@ export function DistrictHero({ district }: DistrictHeroProps) {
           src={district.heroImage}
           alt={district.nameVi}
           fill
-          className="object-cover"
+          className="object-cover object-[center_55%]"
           priority
+          quality={90}
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </div>

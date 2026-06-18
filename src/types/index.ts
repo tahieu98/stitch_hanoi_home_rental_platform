@@ -1,3 +1,5 @@
+import type { StaticImageData } from "next/image";
+
 export interface Property {
   id: string;
   slug: string;
@@ -65,7 +67,7 @@ export interface District {
   taglineVi: string;
   description: string;
   descriptionVi: string;
-  heroImage: string;
+  heroImage: StaticImageData;
   propertyCount: number;
   highlights: DistrictHighlight[];
 }

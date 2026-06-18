@@ -31,6 +31,8 @@ export function DistrictInsight({ district }: DistrictInsightProps) {
               alt={district.nameVi}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
+              quality={90}
+              sizes="(max-width: 768px) 100vw, 67vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
             <div className="absolute bottom-8 left-8 text-white max-w-md">

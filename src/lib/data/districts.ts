@@ -1,4 +1,7 @@
 import type { District } from "@/types";
+import hoanKiemHero from "@/assets/districts/hoan-kiem-hero.webp";
+import westLakeHero from "@/assets/districts/west-lake-hero.webp";
+import baDinhHero from "@/assets/districts/ba-dinh-hero.webp";
 
 export const districts: District[] = [
   {
@@ -11,8 +14,7 @@ export const districts: District[] = [
       "Stay in the heart of Hanoi's Old Quarter, where centuries of history blend with vibrant street life. Walking distance to Hoan Kiem Lake, iconic markets, and the city's best pho and egg coffee shops.",
     descriptionVi:
       "Trải nghiệm không gian sống ngay tại trái tim Phố Cổ Hà Nội, nơi hàng thế kỷ lịch sử hòa quyện với nhịp sống nhộn nhịp. Đi bộ đến Hồ Hoàn Kiếm, các chợ di sản và những quán phở, cà phê trứng nổi tiếng nhất thành phố.",
-    heroImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuASRRL1cobMH7xego1Lz-_43hIJMdhMlT0MDFHSjs0u8s7KgOWNLWxNJBADO09dxYhO0_AmtUUTaf5D5ln3xyYdgFgQB2Vma-rpXs09JW4hnaxzasdJ--GktkiH4NBxCSlFra0QeS80A4hiKOjPfY44y0F5_wPO4YJg10SRKoz1abmDgPisr5XeIU1gN467jn2MiJYPJkqY12migvwZk8j467jhWYVHieT9uKUpcYDH1In1j8iEhWS9xUTcusxn1JYF1A1xJiknooVm",
+    heroImage: hoanKiemHero,
     propertyCount: 127,
     highlights: [
       {
@@ -54,8 +56,7 @@ export const districts: District[] = [
       "Escape to Hanoi's most serene district, where West Lake's calm waters meet upscale villas, lakeside cafes, and international restaurants. Ideal for long-term stays and those seeking peace.",
     descriptionVi:
       "Trốn đến quận yên bình nhất Hà Nội, nơi mặt hồ Tây hòa quyện với các biệt thự cao cấp, quán cà phê ven hồ và nhà hàng quốc tế. Lý tưởng cho kỳ nghỉ dài và những ai tìm kiếm sự tĩnh lặng.",
-    heroImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB1M7jiYbtxstsNSSHvUFM3AFW3hsqBtLDXUgx7F2e7qFk09Nr2Nb1JvYBHxMRRByeqvix52HQqUirtKqERpeOuPDL2D9b1awPAcZ9xsai4_KTGfj-DSWsgxHjvOwH2O_eT1tUaxM4JI1VBdzElL_EgKIRBKpgY2fZtjXsHpjH63mk_emGUarRVjss1_kxHlRtp1xrbd6b-2stT9v04DGYM2xYWlIflIbot4doktWL06yas6oqMC7uj0mEFzy1iRWcm9SNSZ0NriI_g",
+    heroImage: westLakeHero,
     propertyCount: 84,
     highlights: [
       {
@@ -97,8 +98,7 @@ export const districts: District[] = [
       "Stay in the district of monuments, grand boulevards, and quiet luxury. Experience the refined tranquility of Hanoi's most prestigious neighborhood, home to the Presidential Palace and fine arts museums.",
     descriptionVi:
       "Lưu trú tại quận của những đài kỷ niệm, đại lộ hoành tráng và xa hoa yên tĩnh. Trải nghiệm sự tinh tế của khu phố danh giá nhất Hà Nội, nơi đặt Phủ Chủ tịch và các bảo tàng mỹ thuật.",
-    heroImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBS2lzv3qiQY6fL2RZK6IXwtYK09RnYQNRoVBKmADP675ZJL8qynQ-bc7Lf5DJjNh3qhVqvgU631YZuGcOE7mZMyE0w-S_R-p8hC7UyfmczHTwfbCNiKx8B8tEVyQj3ikJrUQPK-s4BCCQh7kvonLAoXzhOq2aUbHCJi3ze3LU0_gsz9iU8GY14gEwUok_xvs_PDcpIVHgsJWt9fW6WdZQqz5VR4MCBmUJOuPcAPOy6Lal-KquDdCtVLecP0kTLMA-7g6tQe8iZzGjn",
+    heroImage: baDinhHero,
     propertyCount: 93,
     highlights: [
       {
