@@ -48,41 +48,41 @@ export default async function PropertyDetailPage({ params }: Props) {
   return (
     <div className="max-w-[80rem] mx-auto px-4 md:px-12 py-8">
       {/* Header */}
-      <header className="mb-6 flex justify-between items-end">
-        <div>
+      <header className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div className="min-w-0">
           <h1
             className="text-2xl md:text-3xl text-on-background mb-2 font-bold"
             style={{ fontFamily: "var(--font-hanken-grotesk)", letterSpacing: "-0.02em", lineHeight: "2.75rem" }}
           >
             {property.titleVi}
           </h1>
-          <div className="flex items-center gap-2 text-sm text-on-surface-variant flex-wrap">
-            <span className="flex items-center gap-1 font-semibold">
+          <div className="flex flex-col items-start gap-2 text-sm text-on-surface-variant md:flex-row md:items-center md:gap-2 md:flex-wrap">
+            <span className="flex w-full items-center gap-1 font-semibold md:w-auto">
               <span className="material-symbols-outlined text-tertiary text-base" style={{ fontVariationSettings: "'FILL' 1" }}>
                 star
               </span>
               {property.rating} ({property.reviewCount} đánh giá)
             </span>
-            <span>·</span>
+            <span className="hidden md:inline" aria-hidden="true">·</span>
             {property.superhost && (
               <>
-                <span className="flex items-center gap-1 hover:underline cursor-pointer">
+                <span className="flex w-full items-center gap-1 hover:underline cursor-pointer md:w-auto">
                   <span className="material-symbols-outlined text-base">workspace_premium</span>
                   Chủ nhà siêu cấp
                 </span>
-                <span>·</span>
+                <span className="hidden md:inline" aria-hidden="true">·</span>
               </>
             )}
-            <Link href="#location" className="underline hover:text-secondary transition-colors">
+            <Link href="#location" className="w-full break-words underline hover:text-secondary transition-colors md:w-auto">
               {property.address}
             </Link>
           </div>
         </div>
-        <div className="flex gap-2">
-          <button className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-surface-container transition-colors font-semibold text-sm">
+        <div className="grid w-full grid-cols-2 gap-2 border-t border-outline-variant/50 pt-3 md:flex md:w-auto md:border-0 md:pt-0">
+          <button className="flex items-center justify-center gap-2 rounded-lg border border-outline-variant/60 px-4 py-2 transition-colors hover:bg-surface-container font-semibold text-sm md:border-0">
             <span className="material-symbols-outlined">ios_share</span> Chia sẻ
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-surface-container transition-colors font-semibold text-sm">
+          <button className="flex items-center justify-center gap-2 rounded-lg border border-outline-variant/60 px-4 py-2 transition-colors hover:bg-surface-container font-semibold text-sm md:border-0">
             <span className="material-symbols-outlined">favorite_border</span> Lưu
           </button>
         </div>
